@@ -7211,7 +7211,7 @@ Partial Class frmMainte
         Me.MaximizeBox = False
         Me.Name = "frmMainte"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "SDS6K-10kE MAINTENANCE  Ver1.00"
+        Me.Text = "SDS6K-10kE MAINTENANCE  Ver1.01"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)

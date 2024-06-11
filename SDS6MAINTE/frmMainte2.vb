@@ -1088,12 +1088,8 @@
 
     Private Sub Btn_AT_Move_Click(sender As Object, e As EventArgs) Handles Btn_AT_Move.Click
 
-        frmMainte.AxDBCommManager1.WriteDevice(DATABUILDERAXLibLB.DBPlcDevice.DKV5000_DM, "9930", frmMainte.ATStubPos.StubPos14)
-        frmMainte.AxDBCommManager1.WriteDevice(DATABUILDERAXLibLB.DBPlcDevice.DKV5000_DM, "9932", frmMainte.ATStubPos.StubPos23)
+        frmMainte.AxDBCommManager1.WriteDevice(DATABUILDERAXLibLB.DBPlcDevice.KV5000_RLY_B, "6813", 1)
 
     End Sub
 
-    Private Sub Txb_AT_Pos14_TextChanged(sender As Object, e As EventArgs) Handles Txb_AT_Pos14.TextChanged
-
-    End Sub
 End Class

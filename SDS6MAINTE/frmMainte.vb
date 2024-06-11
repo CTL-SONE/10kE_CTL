@@ -1,14 +1,16 @@
 ﻿Public Class frmMainte
 
     '**************************************************************
-    '       SDS6K-10kE MAINTENANCE Ver1.00.0.4
-    '                     2023/11/29
+    '       SDS6K-10kE MAINTENANCE Ver1.01.0.0
+    '                     2024/06/11
     '**************************************************************
     'V4.04をベースに、SAIREM 10kW用に修正
     'FS4～6の追加とMW出力最低値を1000Wに変更
     'Ver1.00.0.2 20231106 MW min power change
     'Ver1.00.0.3 20231107 When PLC WRITE is clicked, 
     'Ver1.00.0.4 20231129 - Kajino - To match the format with the current parameter file "CtlVsPrm.txt" in frmMainte2. Disable Maximize of form.
+    'Ver1.01.0.0 20240611 - Sone - Added the ability to change the initial position of stubs on the maintenance screen. In addition, the initial position can be moved by pressing the button
+
 
     'Gas Parameter
     Structure GasParameter
