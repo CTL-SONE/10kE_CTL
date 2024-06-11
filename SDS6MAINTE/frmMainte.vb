@@ -151,10 +151,17 @@
     End Structure
 
 
+
     'Safty Area
     Structure SaftyAeraParameter
         Dim SaftyArea As Long    '0=Normal / 1=Off
         Dim DMval As Long        '2023/4/19     PLC DM119 value (Safety area is DM119.0)
+    End Structure
+
+    'Autotuner Stub 1,2,3,4 Position 0611
+    Structure AutotunerStubPosition
+        Dim StubPos14 As Integer
+        Dim StubPos23 As Integer
     End Structure
 
     Structure WaveLogger
@@ -209,6 +216,9 @@
     Public WtrAlm_FS6 As WatrAlarm 'FS6追加　23/10/04
     Public PyrAlm As PyroAlarm
     Public AutLekrateRec As AutoLeakRateRecord
+
+    'Stub Position追加 24/06/11
+    Public ATStubPos As AutotunerStubPosition
 
     'Private Height_Mes As Integer
     Dim Height_mes As Integer
@@ -1015,6 +1025,11 @@
                 WriteLine(fno, .HigWarDT, .HigAlmDT, .LowWarDT, .LowAlmDT)
             End With
 
+            'Stub Initial Position追加　24/06/11
+            With ATStubPos
+                WriteLine(fno, .StubPos14, .StubPos23)
+            End With
+
             FileClose()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -1239,6 +1254,12 @@
                 Input(fno, .LowAlmDT)
             End With
 
+            '24/6/11 AT Stub Pos追加のため変更
+            With ATStubPos
+                Input(fno, .StubPos14)
+                Input(fno, .StubPos23)
+            End With
+
             FileClose()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -1264,7 +1285,7 @@
     Private Sub RdPrm_PLC()
         'PARAMETER DATA PLC READ
         Dim i As Integer
-        Dim device(171) As DATABUILDERAXLibLB.DBDevice '23/10/4 159からFS6追加のため変更 '23/2/2 134からFS4,5追加のため変更
+        Dim device(173) As DATABUILDERAXLibLB.DBDevice '23/10/4 159からFS6追加のため変更 '23/2/2 134からFS4,5追加のため変更 '24/6/11 171からAT Stub Pos追加のため変更
         Dim rdval As Long
 
 
@@ -1274,7 +1295,7 @@
             My.Application.DoEvents()
         Loop Until RdComp = True
 
-        For i = 1 To 171 '23/10/4 159からFS6追加のため変更 '23/2/2 134からFS4,5追加のため変更
+        For i = 1 To 173 '23/10/4 159からFS6追加のため変更 '23/2/2 134からFS4,5追加のため変更 '24/6/11 171からAT Stub Pos追加のため変更
             device(i) = AxDBDeviceManager2.Devices.Item(i)
             rdval = device(i).ValueRead
             Select Case i
@@ -1483,6 +1504,10 @@
                 Case 170 : WtrAlm_FS6.LowTmp_WarDT = rdval / 10
                 Case 171 : WtrAlm_FS6.LowTmp_AlmDT = rdval / 10
 
+                     '24/6/11 171からAT Stub Pos追加のため変更
+                Case 172 : ATStubPos.StubPos14 = rdval
+                Case 173 : ATStubPos.StubPos23 = rdval
+
             End Select
         Next
     End Sub
@@ -1498,7 +1523,7 @@
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         'PARAMETER DATA PLC WRITE
         Dim i As Integer
-        Dim device(171) As DATABUILDERAXLibLB.DBDevice  '23/10/4 159からFS6追加のため変更 '23/2/2 134からFS4,5追加のため変更
+        Dim device(173) As DATABUILDERAXLibLB.DBDevice  '23/10/4 159からFS6追加のため変更 '23/2/2 134からFS4,5追加のため変更 '24/6/11 171からAT Stub Pos追加のため変更
         Dim wrval As Long
 
         '-----------2023/11/07 kajino PLC WRITE前に、現在の値を読み込み追加-------------
@@ -1525,7 +1550,7 @@
 
         'SAPrm.SaftyArea = AxDBCommManager1.ReadDevice(DATABUILDERAXLibLB.DBPlcDevice.DKV5000_DM, "119")
 
-        For i = 1 To 171  '23/10/4 159からFS6追加のため変更 '23/2/2 134からFS4,5追加のため変更 159
+        For i = 1 To 173  '23/10/4 159からFS6追加のため変更 '23/2/2 134からFS4,5追加のため変更 159  '24/6/11 171からAT Stub Pos追加のため変更
             Select Case i
                 Case 2 : wrval = CLng(GasPrm.Fs(0) * Math.Pow(CDbl(10), CDbl(GasPrm.Decmals(0))))
                 Case 4 : wrval = CLng(GasPrm.Fs(1) * Math.Pow(CDbl(10), CDbl(GasPrm.Decmals(1))))
@@ -1744,6 +1769,11 @@
 
                 Case 170 : wrval = WtrAlm_FS6.LowTmp_WarDT * 10
                 Case 171 : wrval = WtrAlm_FS6.LowTmp_AlmDT * 10
+
+               '24/6/11 171からAT Stub Pos追加のため変更
+                Case 172 : wrval = ATStubPos.StubPos14
+                Case 173 : wrval = ATStubPos.StubPos23
+
 
             End Select
 

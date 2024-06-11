@@ -1,0 +1,1480 @@
+	SEDC0356 Rev.5				
+	SDS Alarm No.	Message	Status:	Possible causes: 	Rectification:
+1	Co_01	  Emergency Off	"Indicating the condition that the EMO button was pressed.
+The entire device including all the valves and the microwave is shut down."	  -1. The operator may have found an abnormality in or around the equipment.	"  -1. Ask the operator why you pressed the button.
+  -2. Check the situation around the equipment. 
+After resolving the problem, turn the EMO button to the direction of the arrow to bring the button back to its original position and then turn on the main switch on the breaker box. 
+For starting the device, please follow the steps.
+Reset the alarm. "
+2	Co_02	  Low CDA Pressure	"Indicating the condition that the compressed air pressure (or Nitrogen) for instrumentation decreased (< 0.35 MPa). 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Problem with the CDA (or N2) supply line.
+(ex: supply pressure decline, supply pressure stop, CDA (or N2) leak)
+  -2. Issue with the CDA sensor.
+"	"  -1. Check the valve on the CDA (or N2) supply line is OPEN properly.
+  -2. Check the tubes on the CDA (or N2) supply line are connected.
+  -3. Check the tube of the CDA (or N2) supply line for deterioration or damage.
+  -4. Check the supply source of the CDA (or N2) line for any abnormalities.
+   If there is a problem with the CDA (or N2) supply line, supply the required value (0.55-0.62MPa (5.5-6.2bar) *) of CDA (or N2). * Gauge reference pressure. 
+
+  -5. Check the pressure value is displayed on the CDA pressure sensor. (The CDA pressure sensor is located in the upper part of the BOX on the back of the reactor rack.) 
+   If there is a problem with the CDA sensor, please contact CORNES Technologies Ltd.
+After secure a pressure supply, Reset the alarm. "
+3	Co_03	  External Interlock	"Indicating the condition that the An exterior interlock signal was input.
+When the alarm goes off, all the valves are closed, the standby mode of microwave is off and the rotary pump is stopped."	"  -1. The interlock signal is received from the outside. 
+  -2. The EXT I / L cable is loose. "	"  -1. Check the equipment from which the EXT I/L terminal linked.
+If there is a problem with the external equipment, resolve the problem,
+
+  -2. Check the EXT I/L terminal connection. (The EXT I/L terminal is located on the back of the PLC-control box.) 
+If the EXT I / L cable is loose, secure it securely.
+After resolving the problem, reset the alarm. "
+4	Co_04	  Vacuum Pump Abnormal	"Indicating the condition that the Vacuum pump motor is happened the thermal trip in distribution box because of motor over current. 
+When the alarm goes off, all the valves are closed, the standby mode of microwave is off and the rotary pump is stopped when it is overheated."	  -1. Vacuum pump was located in the overload state. 	"  -1. Check the Vacuum pump condition,
+After press the reset button on the thermal relay inside the breaker box, Reset the alarm.
+For reset the thermal relay, follow the procedure document ""SEDC0002 Pump Reset Procedure"". 
+   If the  ""VACUUM PUMP ABNORMAL"" alarm occurs frequently, consider replacing the pump. "
+5	Co_05	  Water Pump Abnormal	"Indicating the condition that the water pump motor is happened the thermal trip in distribution box because of motor over current. 
+When the alarm goes off, all the valves are closed, the standby mode of microwave is off and the rotary pump is stopped when it is overheated."	  -1. Water pump was located in the overload state. 	"  -1. Check the water pump condition,
+After press the reset button on the thermal relay inside the breaker box, Reset the alarm.
+For reset the thermal relay, follow the procedure document ""SEDC0002 Pump Reset Procedure"". 
+   If the ""WATER PUMP ABNORMAL"" alarm occurs frequently, consider replacing the pump. "
+6	Co_06	  PLC Abnormal	"Indicating the condition that PLC (Sequencer) has a problem.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	  -1. An error occurred in the PLC or on the gas box MFC control panel.	"  -1. Check the cable connecting the PLC control box to the MFC control panel is connected correctly. 
+  -2. Check the breaker on the MFC control panel is turned ""ON"".
+After checking the connected and the MFC control panel breaker, Reset the alarm.
+Then reboot the PC and PLC.
+   If the ""PLC ABNORMAL"" alarm occurs frequently or cannot reset the alarm, please contact CORNES Technologies Ltd."
+7	Co_07	  MFC1 Flow Deviation From Setpoint	"Indicating the condition that the actual flow rate of the mass flow controller does not reach within the set tolerable range longer than the predetermined time (120 seconds for factory setting) continued.
+Raising the alarm only.(warning)"	"  -1. Problem with the MFC1 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#1."	"  -1. Check the valve on the MFC1 line is OPEN properly.
+  -2. Check the tubes on the MFC1 line is connected.
+  -3. Check the piping of the MFC1 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC1 flow line, supply the properly value. 
+
+  -6. Check the MFC1 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#1, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+8	Co_08	  MFC1 Flow In Deviation For Too Long	"Indicating the condition that described above continued longer than the predetermined time (30 seconds for factory setting) after ""MFC1 FLOW DEVIATION FROM SETPOINT"" warning notice.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off. "	"  -1. Problem with the MFC1 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#1."	"  -1. Check the valve on the MFC1 line is OPEN properly.
+  -2. Check the tubes on the MFC1 line is connected.
+  -3. Check the piping of the MFC1 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC1 flow line, supply the properly value. 
+
+  -6. Check the MFC1 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#1, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+9	Co_09	  MFC2 Flow Deviation From Setpoint	"Indicating the condition that the actual flow rate of the mass flow controller does not reach within the set tolerable range longer than the predetermined time (60 seconds for factory setting) continued.
+Raising the alarm only.(warning)"	"  -1. Problem with the MFC2 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#2."	"  -1. Check the valve on the MFC2 line is OPEN properly.
+  -2. Check the tubes on the MFC2 line is connected.
+  -3. Check the piping of the MFC2 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC2 flow line, supply the properly value. 
+
+  -6. Check the MFC2 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#2, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+10	Co_10	  MFC2 Flow In Deviation For Too Long	"Indicating the condition that described above continued longer than the predetermined time (30 seconds for factory setting) after ""MFC2 FLOW DEVIATION FROM SETPOINT"" warning notice.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off. "	"  -1. Problem with the MFC2 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#2."	"  -1. Check the valve on the MFC2 line is OPEN properly.
+  -2. Check the tubes on the MFC2 line is connected.
+  -3. Check the piping of the MFC2 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC2 flow line, supply the properly value. 
+
+  -6. Check the MFC2 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#2, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+11	Co_11	  MFC3 Flow Deviation From Setpoint	"Indicating the condition that the actual flow rate of the mass flow controller does not reach within the set tolerable range longer than the predetermined time (60 seconds for factory setting) continued.
+Raising the alarm only.(warning)"	"  -1. Problem with the MFC3 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#3."	"  -1. Check the valve on the MFC3 line is OPEN properly.
+  -2. Check the tubes on the MFC3 line is connected.
+  -3. Check the piping of the MFC3 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC3 flow line, supply the properly value. 
+
+  -6. Check the MFC3 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#3, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+12	Co_12	  MFC3 Flow In Deviation For Too Long	"Indicating the condition that described above continued longer than the predetermined time (30 seconds for factory setting) after ""MFC3 FLOW DEVIATION FROM SETPOINT"" warning notice.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off. "	"  -1. Problem with the MFC3 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#3."	"  -1. Check the valve on the MFC3 line is OPEN properly.
+  -2. Check the tubes on the MFC3 line is connected.
+  -3. Check the piping of the MFC3 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC3 flow line, supply the properly value. 
+
+  -6. Check the MFC3 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#3, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+13	Co_13	  MFC4 Flow Deviation From Setpoint	"Indicating the condition that the actual flow rate of the mass flow controller does not reach within the set tolerable range longer than the predetermined time (60 seconds for factory setting) continued.
+Raising the alarm only.(warning)"	"  -1. Problem with the MFC4 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#4."	"  -1. Check the valve on the MFC4 line is OPEN properly.
+  -2. Check the tubes on the MFC4 line is connected.
+  -3. Check the piping of the MFC4 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC4 flow line, supply the properly value. 
+
+  -6. Check the MFC4 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#4, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+14	Co_14	  MFC4 Flow In Deviation For Too Long	"Indicating the condition that described above continued longer than the predetermined time (30 seconds for factory setting) after ""MFC4 FLOW DEVIATION FROM SETPOINT"" warning notice.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off. "	"  -1. Problem with the MFC4 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#4."	"  -1. Check the valve on the MFC4 line is OPEN properly.
+  -2. Check the tubes on the MFC4 line is connected.
+  -3. Check the piping of the MFC4 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC4 flow line, supply the properly value. 
+
+  -6. Check the MFC4 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#4, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+15	Co_15	  MFC5 Flow Deviation From Setpoint	"Indicating the condition that the actual flow rate of the mass flow controller does not reach within the set tolerable range longer than the predetermined time (60 seconds for factory setting) continued.
+Raising the alarm only.(warning)"	"  -1. Problem with the MFC5 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#5."	"  -1. Check the valve on the MFC5 line is OPEN properly.
+  -2. Check the tubes on the MFC5 line is connected.
+  -3. Check the piping of the MFC5 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC5 flow line, supply the properly value. 
+
+  -6. Check the MFC5 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#5, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+16	Co_16	  MFC5 Flow In Deviation For Too Long	"Indicating the condition that described above continued longer than the predetermined time (30 seconds for factory setting) after ""MFC5 FLOW DEVIATION FROM SETPOINT"" warning notice.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off. "	"  -1. Problem with the MFC5 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#5."	"  -1. Check the valve on the MFC5 line is OPEN properly.
+  -2. Check the tubes on the MFC5 line is connected.
+  -3. Check the piping of the MFC5 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+If there is a problem with the MFC5 flow line, supply the properly value. 
+
+  -6. Check the MFC5 flow rate is stable. 
+If there is a problem with the Mass Flow Controller#5, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+17	Co_17	  MFC6 Flow Deviation From Setpoint	"Indicating the condition that the actual flow rate of the mass flow controller does not reach within the set tolerable range longer than the predetermined time (60 seconds for factory setting) continued.
+Raising the alarm only.(warning)"	"  -1. Problem with the MFC6 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#6."	"  -1. Check the valve on the MFC6 line is OPEN properly.
+  -2. Check the tubes on the MFC6 line is connected.
+  -3. Check the piping of the MFC6 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC6 flow line, supply the properly value. 
+
+  -6. Check the MFC6 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#6, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+18	Co_18	  MFC6 Flow In Deviation For Too Long	"Indicating the condition that described above continued longer than the predetermined time (30 seconds for factory setting) after ""MFC6 FLOW DEVIATION FROM SETPOINT"" warning notice.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off. "	"  -1. Problem with the MFC6 flow line.
+(ex: supply pressure decline, gas supply stop, gas leak)
+  -2. The gas filter is clogged.
+  -3. Problem with the Mass Flow Controller#6."	"  -1. Check the valve on the MFC6 line is OPEN properly.
+  -2. Check the tubes on the MFC6 line is connected.
+  -3. Check the piping of the MFC6 line for deterioration or damage.
+  -4. Check the gas level for tank.
+  -5. Check the previous maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+   If there is a problem with the MFC6 flow line, supply the properly value. 
+
+  -6. Check the MFC6 flow rate is stable. 
+   If there is a problem with the Mass Flow Controller#6, Consider replacing the MFC.
+After secure a supply, Reset the warning. "
+19	Co_19	  Pressure Deviation From Setpoint	"Indicating the condition that the chamber pressure displayed in the gMeasuredh box does out of the setpoint (tolerable range :+/- 0.5 Torr for factory setting) longer than the set time (10 minutes for factory setting) .
+Raising the alarm only.(warning)"	"  -1. The gas flow rate supplied is not suitable.
+When the pressure is lower than the setpoint pressure, possible a shortage of gas supply.
+When the pressure is higher than the setpoint pressure, possible an oversupply of gas.
+  -2. The exhaust filter is clogged.
+  -3. Problem with the vacuum line."	"  -1. Check the value of gas flow rate.
+  -2. Check the valve on the gas line is OPEN properly.
+  -3. Check the tubes on the gas line is connected.
+  -4. Check the piping of the gas line for deterioration or damage.
+  -5. Check the gas level for tank.
+  -6. Check the value of gas flow rate.
+  -7. Check the previous maintenance record. (Recommended maintenance frequency is 1 year or 60 batch)
+  -8. Check the pressure control valve is operating properly.
+
+   If the condition with the lower pressure than the setpoint and little supply gas flow rate.
+Please to increase the setpoint value of the gas flow rate.
+   If the condition with the higher pressure than the setpoint and much supply gas flow rate.
+Please to reduce the setpoint value of the gas flow rate.
+After secure a supply, Reset the alarm. 
+   If there is a problem with the pressure control valve, Consider replacing."
+20	Co_20	  Pressure In Deviation For Too Long	"Indicating the condition that the chamber pressure displayed in the gMeasuredh box does out of the setpoint (tolerable range :+/- 0.5 Torr for factory setting) longer than the predetermined time (5 minutes for factory setting) after ""PRESSURE DEVIATION FROM SETPOINT"" warning notice.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off. "	"  -1. The gas flow rate supplied is not suitable.
+When the pressure is lower than the setpoint pressure, possible a shortage of gas supply.
+When the pressure is higher than the setpoint pressure, possible an oversupply of gas.
+  -2. The exhaust filter is clogged.
+  -3. Problem with the vacuum line."	"  -1. Check the value of gas flow rate.
+  -2. Check the valve on the gas line is OPEN properly.
+  -3. Check the tubes on the gas line is connected.
+  -4. Check the piping of the gas line for deterioration or damage.
+  -5. Check the gas level for tank.
+  -6. Check the value of gas flow rate.
+  -7. Check the previous maintenance record. (Recommended maintenance frequency is 1 year or 60 batch)
+  -8. Check the pressure control valve is operating properly.
+
+   If the condition with the lower pressure than the setpoint and little supply gas flow rate.
+Please to increase the setpoint value of the gas flow rate.
+   If the condition with the higher pressure than the setpoint and much supply gas flow rate.
+Please to reduce the setpoint value of the gas flow rate.
+After secure a supply, Reset the alarm. 
+   If there is a problem with the pressure control valve, Consider replacing."
+21	Co_21	  Soft Rough Time Interval Exceeded	"Indicating that the pressure does not reach the set pressure (10Torr for factory setting) within the set time (10 minutes for factory setting) from the start of the soft exhaust execution.
+Raising the alarm only.(warning)"	"  -1. Some big air leak points in the equipment.
+(ex: scratch, crack, gap, water leak)
+  -2. The exhaust filter is clogged.
+  -3. Problem with the vacuum line.
+  -4. Problem with the vacuum pump."	"  -1. Check the chamber is closed properly.
+  -2. Check the O-ring is installed correctly.
+  -3. Check the piping of the vacuum line for deterioration or damage.
+  -4. Check the piping clamps are tightened correctly.
+  -5. Check the quartz in the view port for cracks.
+  -6. Check the quartz-ring at the bottom of the stage for cracks.
+  -7. Check the water leaks in the chamber.
+  -8. Check the sealing surface is not scratched.
+  -9. Check the previous maintenance record. (Recommended maintenance frequency is 1 year or 60 batch)
+  -10. Check the pressure control valve is operating properly.
+  -11. Check the pump is working properly.
+
+  After resolving air leak points, Reset the alarm. 
+  If there is a problem with the vacuum pump, Consider replacing or maintenance  the vacuum pump, follow the procedure document ""SEDC0159 Rev2 SDS6K PM Maintenance Manual & Mainte Plan"". "
+22	Co_22	  Full Rough Time Interval Exceeded	"Indicating that the pressure does not reach the base pressure (0.3Torr for factory setting) within the set time (10 minutes for factory setting) from the start of the rough exhaust execution.
+Raising the alarm only.(warning)"	"  -1. Some air leak points in the equipment.
+(ex: scratch, crack, gap, water leak)
+  -2. The zero point of the diaphragm gauge is out of alignment. "	"  -1. Check the O-ring is installed correctly.
+  -2. Check the piping of the vacuum line for deterioration or damage.
+  -3. Check the piping clamps are tightened correctly.
+  -4. Check the quartz in the view port for cracks.
+  -5. Check the quartz-ring at the bottom of the stage for cracks.
+  -6. Check the water leaks in the chamber.
+  -7. Check the sealing surface is not scratched.
+  -8. Check the dust is not put on the sealing surface.
+  -9. Compare the pressure value of the diaphragm gauge with the Pirani gauge, and check the pressure value difference is small. 
+
+  If the pressure value difference is large between the diaphragm and Pirani.(approx.: over 0.5Torr)
+Readjust the zero point of the diaphragm gauge. 
+  After resolving air leak points or readjust the zero point, Reset the alarm. 
+For readjust the zero point, follow the procedure document ""SEDC0159 Rev2 SDS6K PM Maintenance Manual & Mainte Plan""."
+23	Co_23	  Gas Manifold Pressure Is Too High	"Indicating that the gas manifold pressure exceeds the predetermined pressure (> 260Torr).
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The process gas pressure has become a setting that exceeds the limit. 
+  -2. Problem with the gas line or vacuum line."	"  -1. Check the process gas pressure.
+  -2. Check the recipe setting.
+  If  the process gas pressure exceeds the limit,  Review the process gas pressure setting.
+
+  -3. Check the MFC is working properly.
+  -4. Check the pressure control valve is working properly.
+  -5. Check the gas piping for leaks. 
+  If a Problem with the equipment, resolving a problem or please contact CORNES Technologies Ltd.
+  After check possible causes, Vacuum the gas line and keep it below 260 Torr. And reset the alarm.
+For vacuum the gas line, open the valve (V4) connected to the gas line after vacuuming the chamber (after rough pumping).
+valve (V4) can be controlled by operation from the maintenance GUI or individual operation of MFC in the control GUI."
+24	Co_24	  Reflected Power Exceeds Threshold	"Indicating that a microwave reflective output value  continues to exceed the set value (500 W for factory setting) for longer than the set time (30 sec for factory setting).
+Raising the alarm only.(warning)"	"  -1. Tuning position adjustment of the tuner insufficient.
+  -2. The plasma unstable.
+If the process pressure and MW output power are not well balanced, the plasma discharge and the position will become unstable."	"  -1. Check the tuning position.
+  -2. Check the plasma is in the correct position.
+  -3. Check the process pressure and MW output power.
+  After decline the microwave reflective output value, Reset the warning. "
+25	Co_25	  Reflected Power Above Threshold Too Long	"Indicating that a microwave reflective wave output continues to exceed the set value (500 W for factory setting) longer than the predetermined time (30 sec for factory setting).
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Tuning position adjustment of the tuner insufficient.
+  -2. The plasma unstable.
+If the process pressure and MW output power are not well balanced, the plasma discharge and the position will become unstable."	"  -1. Check the tuning position.
+  -2. Check the plasma is in the correct position.
+  -3. Check the process pressure and MW output power.
+  After decline the microwave reflective output value, Reset the alarm. "
+26	Co_26	  Flammable Gas Concentration (O2/H2>5%)	"O2/H2 > 5%: Indicating that the oxygen/hydrogen mixing ratio exceeds 5% (explosive limit). 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The O2 gas flow rate has become a setting that exceeds the limit.
+The O2 gas flow rate should be 5% or less of the H2 gas.  
+  -2. Problem with the gas supply or the MFC.
+When the H2 gas flow rate is lower than the setpoint, possible the gas filter is clogged.
+When the O2 gas flow rate is higher than the setpoint pressure, possible an oversupply of gas."	"  -1. Check the O2(MFC4) gas flow rate of recipe setting.
+  -2. Check the H2(MFC1) gas flow rate of recipe setting.
+  -3. Check the O2(MFC4) and H2(MFC1) flow rate is stable. 
+  -4. Check the previous for the gas filter maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+  -5. Check the value of gas flow rate.
+  If the O2 flow rate is set to 5% or more of the H2 flow rate, change the setting.
+  If the O2 flow rate fluctuates slightly and exceeds 5%, consider increasing the H2 flow rate. 
+After check possible causes, Reset the alarm. "
+27	Co_27	  MW-Generator Abnormal	"Indicating the condition that microwave units has a problem.
+This message is displayed together with the details of a microwave power source error starting with [MW].
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Problem with the MW power supply or MW head.
+This message is displayed together with the details of a microwave power supply error starting with [MW].
+  -2. Problem with the communication between the MW power supply and the MW head.
+If the error is caused by a communication failure, multiple [MW] error messages may be displayed."	"  -1. Check the [MW] error message and support massage.
+  -2. Check the error message displayed on the MW power supply display. 
+  -3. Check the cables are connected correctly.
+  -4. Check the cable for damage.
+  After checking the [MW] error and communication cable, Reset the alarm.
+If the [MW] error message remains after the alarm reset, perform the alarm reset again.  "
+28	Co_28	  MW-Generator Communication Error	"Indicating the condition that no communication with the microwave generator.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	  -1. Problem with the communication between the PLC-BOX and the MW power supply.	"  -1. Check the cables are connected correctly.
+  -2. Check the cable for damage.
+  -3. Check the breaker of the MW power supply is ON.
+  After check possible causes, Reset the alarm. 
+If the [MW] error message remains after the alarm reset, perform the alarm reset again.  "
+29	Co_29	  TMP Abnormal	"Indicating the condition that some errors in the TMP unit.
+Raising the alarm only.(warning)"	"  -1. Problem with the communication between the PLC-BOX and the TMP unit.
+  -2. Problem with the TMP unit."	"  -1. Check the cables are connected correctly.
+  -2. Check the cable for damage.
+  -3. Check the error message for the TMP controller.
+  -4. Check any abnormality in the auxiliary exhaust pump. 
+  -5. Check the breaker of the TMP unit is ON.
+  After check possible causes, Reset the warning. "
+30	Co_30	  Electric Power Failure	"Indicating a power failure has occurred.
+Raising the alarm only."	  -1. Possible a problem with the facility. 	"  -1. Check the facility.
+  After resolving the problem,
+For starting the device, please follow the steps.
+Reset the alarm. "
+31	Co_31	  Z Axis Motor Alarm	"Indicating that an error occurred in the motor for the movable stage.
+Raising the alarm only.(warning)"	"  -1. Problem with the communication between the MFC control panel and the motor for movable stage.
+  -2. Problem with the motor for movable stage."	"  -1. Check the cables are connected correctly.
+  -2. Check the cable for damage.
+  -3. Check foreign objects caught in the moving parts.
+  After check possible causes, Reset the warning. "
+32	Co_32	  Stage Control Abnormal	"Indicating that an error occurred in the motor for the movable stage.
+Raising the alarm only.(warning)"	"  -1. Problem with the communication between the MFC control panel and the motor for movable stage.
+  -2. Problem with the motor for movable stage."	"  -1. Check the cables are connected correctly.
+  -2. Check the cable for damage.
+  -3. Check foreign objects caught in the moving parts.
+  After check possible causes, Reset the warning. "
+33	Co_33	  Heater Abnormal	"Indicating the condition that some errors in the heater unit.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Problem with the communication between the PLC-BOX and the heater unit.
+  -2 Problem with the heater unit.
+  -3. Possible It be short-circuited by soot. "	"  -1. Check the cables are connected correctly.
+  -2. Check the cable for damage.
+  -3. Check the error signal for the heater controller.
+  -4. Check the breaker of the heater unit is ON.
+  -5. Check soot has accumulated in the chamber.
+  If soot is accumulated, it needs to be disassembled and cleaned. please contact CORNES Technologies Ltd.
+After check possible causes, Reset the alarm. "
+34	Co_34	  Pyro High Warning	"Indicating that the measured temperature reaches the high set temperature for warning of pyrometer. 
+Raising the alarm only.(warning)"	"  -1. A lot of heat input to the substrate.
+  -2. Plasma is not lit in the correct position (plasma jump)
+  -3. Measurement spot of the pyrometer is out of alignment."	"  -1. Check the MW power and pressure.
+  If there is a lot of heat input, reduce the MW output.
+  -2. Check the plasma status.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position. 
+  -3. Check the measurement spot is not misaligned.
+  -4. Check the substrate is not misaligned.
+  If the measurement spot of the pyrometer is misaligned, readjust the measurement spot. 
+After check possible causes, Reset the warning. "
+35	Co_35	  Pyro High Alarm	"Indicating that the measured temperature reaches the high set temperature for alarm of pyrometer.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. A lot of heat input to the substrate.
+  -2. Plasma is not lit in the correct position (plasma jump)
+  -3. Measurement spot of the pyrometer is out of alignment."	"  -1. Check the MW power and pressure.
+  -2. Check is something wrong with the chamber.
+  -3. Check the measurement spot is not misaligned.
+  -4. Check the board is not misaligned.
+  After check possible causes, Reset the alarm. "
+36	Co_36	  Pyro Low Warning	"Indicating that the measured temperature reaches the low set temperature for warning of pyrometer. 
+Raising the alarm only.(warning)"	"  -1. Plasma is not lit in the correct position (plasma jump)
+  -2. Measurement spot of the pyrometer is out of alignment."	"  -1. Check the plasma status.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position. 
+  -2. Check the measurement spot is not misaligned.
+  -3. Check the substrate is not misaligned.
+  If the measurement spot of the pyrometer is misaligned, readjust the measurement spot. 
+After check possible causes, Reset the warning. "
+37	Co_37	  Pyro Low Alarm	"Indicating that the measured temperature reaches the low set temperature for alarm of pyrometer.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Plasma had been not lit in the correct position (plasma jump)
+  -2. Measurement spot of the pyrometer is out of alignment."	"  -1. Check is something wrong with the chamber.
+  -2. Check the measurement spot is not misaligned.
+  -3. Check the board is not misaligned.
+  After check possible causes, Reset the alarm. "
+38	Co_38	  FS1 Flow Low Warning	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 1 (cooling the chamber lid) for  warning.
+Raising the alarm only.(warning)"	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the warning."
+39	Co_39	  FS2 Flow Low Warning	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 2 (cooling the chamber base plate and end plate) for warning.
+Raising the alarm only.(warning)"	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the warning."
+40	Co_40	  FS3 Flow Low Warning	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 3 (cooling the stage) for warning.
+Raising the alarm only.(warning)"	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the warning."
+41	Co_41	  FS1 Flow Low Alarm	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 1 (cooling the chamber lid) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the alarm."
+42	Co_42	  FS2 Flow Low Alarm	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 2 (cooling the chamber base plate and end plate) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the alarm."
+43	Co_43	  FS3 Flow Low Alarm	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 3 (cooling the stage) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the alarm."
+44	Co_44	  Wavelogger Abnormal	Wavelogger is not running. 	"  -1. Wavelogger is stopped or closed.
+  -2. Datalogger is disconnected."	"To start wavelogger properly, click ""WAVE LOG"" button on control GUI."
+45	Co_45	  Over Pressure Range Warning	"Indicating that the measured chamber pressure reaches the warning set pressure while microwaves are emitted. The warning set pressure is value of ""PROC LIMIT"" minus ""PROC WARNING(DIFFERENCE)"".
+Raising the alarm only.(warning)"	" -1. Problem with the setting value of chamber pressure.
+ -2. Problem with the pressure measuring device.
+ -3. Atmospheric air may be flowing into the chamber."	" -1.Check that the chamber pressure setting in the recipe or manual input does not exceed the limit value.
+ -2.Check that the vacuum exhaust system (exhaust pump and each valves) is operating normally.
+ -3.Check that the gas supply system (mass flow and each valves) is operating normally.
+ -4.Check that the pressure measuring device is working properly.
+ -5.Check that there is no damage to the sight glass window or scratches that could cause atmospheric leakage.
+  After checking the above items , Reset the alarm."
+46	Co_46	  Over Pressure Range Alarm	"Indicating that the measured chamber pressure reaches the set pressure (""PROC LIMIT"") while microwaves are emitted. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	" -1. Problem with the setting value of chamber pressure.
+ -2. Problem with the pressure measuring device.
+ -3. Atmospheric air may be flowing into the chamber."	" -1.Check that the chamber pressure setting in the recipe or manual input does not exceed the limit value.
+ -2.Check that the vacuum exhaust system (exhaust pump and each valves) is operating normally.
+ -3.Check that the gas supply system (mass flow and each valves) is operating normally.
+ -4.Check that the pressure measuring device is working properly.
+ -5.Check that there is no damage to the sight glass window or scratches that could cause atmospheric leakage.
+  After checking the above items , Reset the alarm."
+47	Co_47	  Reserve			
+48	Co_48	  Reserve			
+49	Co_49	  Reserve			
+50	Co_50	  FS1 Temp. High Warning	"Indicating that the measured water temperature reaches the high set temperature of sensor 1 (cooling the chamber lid) for  warning.
+Raising the alarm only.(warning)"	"  -1. Abnormal heat input in the chamber lid.
+  -2. The cooling water flow rate is low.(flow meter FS1)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position. 
+  -2. Check is something wrong with the chamber lid.
+  -3. Check the flow rate of the flow meter FS1.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+51	Co_51	  FS2 Temp. High Warning	"Indicating that the measured water temperature reaches the high set temperature of sensor 2 (cooling the chamber base plate and end plate) for warning.
+Raising the alarm only.(warning)"	"  -1. Abnormal heat input in the chamber base plate and end plate.
+  -2. The cooling water flow rate is low.(flow meter FS2)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position.
+  -2. Check is something wrong with the chamber base plate and end plate.
+  -3. Check the flow rate of the flow meter FS2.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+52	Co_52	  FS3 Temp. High Warning	"Indicating that the measured water temperature reaches the high set temperature of sensor 3 (cooling the stage) for warning.
+Raising the alarm only.(warning)"	"  -1. Abnormal heat input in the stage.
+  -2. The cooling water flow rate is low.(flow meter FS3)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position. 
+  -2. Check is something wrong with the stage.
+  -3. Check the flow rate of the flow meter FS3.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+53	Co_53	  FS1 Temp. High Alarm	"Indicating that the measured water temperature reaches the high set temperature of sensor 1 (cooling the chamber lid) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Abnormal heat input in the chamber lid.
+  -2. The cooling water flow rate is low.(flow meter FS1)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position. 
+  -2. Check is something wrong with the chamber lid.
+  -3. Check the flow rate of the flow meter FS1.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+54	Co_54	  FS2 Temp. High Alarm	"Indicating that the measured water temperature reaches the high set temperature of sensor 2 (cooling the chamber base plate and end plate) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Abnormal heat input in the chamber base plate and end plate.
+  -2. The cooling water flow rate is low.(flow meter FS2)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position.
+  -2. Check is something wrong with the chamber base plate and end plate.
+  -3. Check the flow rate of the flow meter FS2.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+55	Co_55	  FS3 Temp. High Alarm	"Indicating that the measured water temperature reaches the high set temperature of sensor 3 (cooling the stage) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Abnormal heat input in the stage.
+  -2. The cooling water flow rate is low.(flow meter FS3)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position. 
+  -2. Check is something wrong with the stage.
+  -3. Check the flow rate of the flow meter FS3.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+56	Co_56	  FS1 Temp. Low Warning	"Indicating that the measured water temperature reaches the low set temperature of sensor 1 (cooling the chamber lid) for  warning.
+Raising the alarm only.(warning)"	"  -1. The cooling water flow rate is high.(flow meter FS1)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS1.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+57	Co_57	  FS2 Temp. Low Warning	"Indicating that the measured water temperature reaches the low set temperature of sensor 2 (cooling the chamber base plate and end plate) for warning.
+Raising the alarm only.(warning)"	"  -1. The cooling water flow rate is high.(flow meter FS2)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS2.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+58	Co_58	  FS3 Temp. Low Warning	"Indicating that the measured water temperature reaches the low set temperature of sensor 3 (cooling the stage) for warning.
+Raising the alarm only.(warning)"	"  -1. The cooling water flow rate is high.(flow meter FS3)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS3.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+59	Co_59	  FS1 Temp. Low Alarm	"Indicating that the measured water temperature reaches the low set temperature of sensor 1 (cooling the chamber lid) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The cooling water flow rate is high.(flow meter FS1)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS1.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+60	Co_60	  FS2 Temp. Low Alarm	"Indicating that the measured water temperature reaches the low set temperature of sensor 2 (cooling the chamber base plate and end plate) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The cooling water flow rate is high.(flow meter FS2)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS2.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+61	Co_61	  FS3 Temp. Low Alarm	"Indicating that the measured water temperature reaches the low set temperature of sensor 3 (cooling the stage) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The cooling water flow rate is high.(flow meter FS3)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS3.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+62	Co_62	  Power High Limit Warning	"Indicating that the measured MW power reaches the high limit power for the auto temperature control. 
+Raising the alarm only.(warning)"	"The output MW power reaches the set point of MW high limit value, however the substrate temperature is not heated to the set value."	"If you want to heat the substrate more, review the automatic temperature control conditions.
+Reset the warning. "
+63	Co_63	  Reserve			
+64	Co_64	  Power Low Limit Warning	"Indicating that the measured MW power reaches the low limit power for the auto temperature control. 
+Raising the alarm only.(warning)"	"The output MW power reaches the set point of MW low limit value, however the substrate temperature is not cooled to the set value."	"If you want to cool the substrate more, review the automatic temperature control conditions.
+Reset the warning. "
+65	Co_65	  Reserve			
+66	Co_66	  Power Deviation From Setpoint	"Indicating that  measured microwave output value continues out of the setpoint (tolerable range :+/- 100 W for factory setting) for or longer than the set time (300 sec for factory setting).
+Raising the alarm only.(warning)"	"  -1. Something wrong with the magnetron head. 
+  -2. he filament aging is inadequate. 
+Allow sufficient aging time before performing MW output."	"  -1. Check the previous maintenance record. (Recommended maintenance frequency is 1 year or 60 batch)
+  Consider replacing the magnetron head. 
+Please follow procedure file ""SEDC0120 Magnetron Replaced Manual"" that will be attached to this manual package.
+Reset the warning. "
+67	Co_67	  Power In Deviation For Too Long	"Indicating that  measured microwave output value continues out of the setpoint (tolerable range :+/- 100 W for factory setting) for or longer than the set time (30 sec for factory setting) after ""POWER DEVIATION FROM SETPOINT"" warning notice.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Something wrong with the magnetron head. 
+  -2. The filament aging is inadequate. 
+Allow sufficient aging time before performing MW output."	"  -1. Check the previous maintenance record. (Recommended maintenance frequency is 1 year or 60 batch)
+  Consider replacing the magnetron head. 
+Please follow procedure file eSEDC0120 eMagnetron Replaced Manualf that will be attached to this manual package.
+Reset the alarm. "
+68	Co_68	  Flammable Gas Concentration (O2/H2>5%) Semi-Auto	"O2/H2 > 5%: Indicates that the oxygen/hydrogen mixing ratio has exceeded 5% (explosion limit).
+When the alarm sounds, only oxygen is to be shut off."	"  -1. The O2 gas flow rate has become a setting that exceeds the limit.
+The O2 gas flow rate should be 5% or less of the H2 gas.  
+  -2. Problem with the gas supply or the MFC.
+When the H2 gas flow rate is lower than the setpoint, possible the gas filter is clogged.
+When the O2 gas flow rate is higher than the setpoint pressure, possible an oversupply of gas."	"  -1. Check if the O2(MFC4) gas flow rate is consistent with the set value.
+  -2. Check the H2(MFC1) gas flow rate of setpoint.
+  -3. Check the O2(MFC4) and H2(MFC1) flow rate is stable. 
+  -4. Check the previous for the gas filter maintenance record. (Recommended maintenance frequency is 3 year or 240 batch)
+  -5. Check the value of gas flow rate.
+  If the O2 flow rate is set to 5% or more of the H2 flow rate, change the setting.
+  If the O2 flow rate fluctuates slightly and exceeds 5%, consider increasing the H2 flow rate. 
+After check possible causes, Reset the alarm. "
+69	Co_69	 Out of Control for Auto Temp. Control	"Indicates that all active parameters (POWER, CHMB, or PLEN) have reached either High or Low Limits, or GAP Limit in the case of PLEN, during automatic temperature control (ATC).
+  -1. When sample is too COLD (out of the target temperature tolerance range), POWER or CHMB reached the High limit and PLEN reached the low limit.
+  -2. When sample is too HOT (out the target temperature tolerance range), POWER or CHMB reached the Low limit and PLEN reached either High or GAP limit.
+If one ramp setting is ""0"", then corresponding parameter is not managed the ATC, and ignored in the judgement of this alarm.
+Raising the alarm only. (warning)"	"  -1. Problem with the pyrometer.
+  -2. ATC parameters are not set properly.
+  -3. Diamond growth has reached the limit to ensure a constant temperature with these ATC settings."	"  -1. Check the POWER and CHMB and PLEN set point.
+  -2. Increase the POWER or CHMB high limit set point or reduce the PLEN low limit set point when sample is too COLD. 
+  -3. Reduce the POWER or CHMB low limit or the GAP limit set point or increase the PLEN high limit set point when sample is too HOT. 
+  If the measurement spot of the pyrometer is misaligned, readjust the measurement spot and avoid poly on the edge of diamond. 
+After checking all possible causes, reset the warning. "
+70		  Reserve			
+71		  Reserve			
+72		  Reserve			
+73		  Reserve			
+74		  Reserve			
+75		  Reserve			
+76		  Reserve			
+77		  Reserve			
+78		  Reserve			
+79		  Reserve			
+80		  Reserve			
+81	M3_01	  [MW] Sum Check Error	"Indicating the condition that some errors in the microwave components.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Sum check error is output together with other errors.	"Rectification of the other displayed errors.
+After check possible causes, Reset the alarm from the control GUI for PC. "
+82	M3_02	  [MW] Actual<Normal Error		Nominal-actual value deviation > 50 %	Check mains circuit and main fuse (mains voltage present?) Is a phase missing?
+83	M3_03	  [MW] Overtemp. Magnetron Error		Temperature in magnetron head is > 50deg C	"Check cooling water temperature at power supply and magnetron head for values out of spec (nominal: 20 - 25deg C) 
+Check cooling water throughput at power supply and magnetron head for values out of spec (nominal: >=4 l/min)"
+84	M3_04	  [MW] Overtemp. Power supply		Power supply temperature is > 50deg C	"Check cooling water temperature at power supply and magnetron head for values out of spec (nominal: 20 - 25deg C) 
+Check cooling water throughput at power supply and magnetron head for values out of spec (nominal: >=4 l/min)"
+85	M3_05	  [MW] Max. LA		Overvoltage in magnetron head	"CAUTION: Disconnect power supply and secure against accidental re-activation. 
+Check connection cable between power supply and magnetron unit. 
+Check HV cable (poss. short circuit against ground). 
+Exchange connection cable crosswise. If the error moves with the exchange, then the fault is in the magnetron head. 
+CAUTION: The fault may only re-occur after some time (magnetron ageing). 
+Replace magnetron or magnetron unit"
+86	M3_06	  [MW] Max. UA		Anode voltage is above max. limit 	"Check connection cable between power supply and magnetron unit Check HV cable for defects! 
+CAUTION: Disconnect power supply and secure against accidental re-activation. 
+Exchange magnetron unit (HV cable) crosswise. If the error moves with the exchange, then the fault is in the magnetron unit. 
+CAUTION: The fault may only re-occur after some time (magnetron ageing). Replace magnetron or magnetron unit "
+87	M3_07	  [MW] Max. LZK		Intermediate circuit monitoring	Check mains voltage for undervoltage and/or check for extreme mains fluctuations.
+88	M3_08	  [MW] HZ Error		Filament heater out of tolerance	"Check mains circuit and main fuse (mains voltage present?) 
+Missing a phase
+Check fuse F1 on the mains adapter.
+Check connection cable between power supply and magnetron unit"
+89	M3_09	  [MW] Interlock Error		Interlock not set	"Set interlock bit 
+Check system and disengage safety devices (emergency stop, safety limit switch, etc.)"
+90	M3_10	  [MW] Communication Error		Error in communication 	"RS232 bus is incorrectly configured. Check transmission interval (transmission interval should not be greater than 2000 ms/ recommended are approx. 200 ms) 
+Check RS232 bus pin assignments 
+Check RS232 bus cable 
+Check RS232 bus addresses "
+91	M3_11	  [MW] HF Error		"HF error (deviation HF and anode power value) 
+ Is only evaluated with HF control"	"Change the control setting.
+Reset the alarm from the control GUI for PC. "
+92	M3_12	  [MW] ARC		An arc has occurred inside the waveguide.	"Check application for defects. 
+Check circulator for consequential damage. 
+Check magnetron for consequential damage. "
+93	M3_13	  [MW] Head Not Present		No connection to the magnetron head. 	"The connection cable to the magnetron head is not or incorrectly plugged in. 
+Check connection cable for damage. 
+X11 not connected correctly. "
+94	M3_14	  [MW] Low Voltage		Mains voltage out of tolerance	"Ensure that mains voltage is within specified tolerance.
+Ensure that all three phases L1, L2, and L3 are present."
+95	M3_15	  [MW] Warning_1	Indicates that a warning is output from the MW power supply. 	A warning signal is output from the MW power supply. 	"Check the warning notice on the MW power display.
+After check possible causes, Reset the alarm from the control GUI for PC. "
+96	M3_16	  [MW] Warning_2	Indicates that a warning is output from the MW power supply. 	A warning signal is output from the MW power supply. 	"Check the warning notice on the MW power display.
+After check possible causes, Reset the alarm from the control GUI for PC. "
+97	M3_17	  [MW] Warning_3	Indicates that a warning is output from the MW power supply. 	A warning signal is output from the MW power supply. 	"Check the warning notice on the MW power display.
+After check possible causes, Reset the alarm from the control GUI for PC. "
+98	M3_18	  [MW] Warning_4	Indicates that a warning is output from the MW power supply. 	A warning signal is output from the MW power supply. 	"Check the warning notice on the MW power display.
+After check possible causes, Reset the alarm from the control GUI for PC. "
+99	M4_01	  [MW] Checksum Error	"Indicating the condition that some errors in the microwave components.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Checksum error is output together with other errors.	"Rectification of the other displayed errors.
+After check possible causes, Reset the alarm from the control GUI for PC. "
+100	M4_02	  [MW] Communication Error	"Indicating the condition that MW power supply cannot communicate for the PLC unit.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Communication cannot be established via CAN bus.	"  -1. Check CAN bus cable. 
+  After check possible causes, Reset the alarm from the control GUI for PC. 
+If the [MW] error message remains after the alarm reset, perform the alarm reset again.  "
+101	M4_03	  [MW] Interlock Fault	"Indicating the condition that MW power supply Interlock circuit not closed.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"Interlock bit (software interlock ON) not set. 
+Interlock circuit not closed. "	"  -1. Check for other alarms that you are alerting at the same time.
+Rectification of the other displayed errors. 
+After check possible causes, Reset the alarm from the control GUI for PC. "
+102	M4_04	  [MW] Anode Undervoltage	"Indicating the condition that the MW anode voltage is too low.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The anode voltage is too low. 	"  -1.  ATTENTION: De-energize the power supply and safeguard it from being switched again. 
+  -2. Check the connecting cable between the power supply and the magnetron unit. 
+  -3. Check high-voltage cable, possible short circuit to ground. 
+  -4. After reset, the error can recur after a certain time (magnetron ageing). 
+  -5. Replace magnetron or magnetron unit. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+103	M4_05	"  [MW] Communication, Magnetron Head"	"Indicating the condition that MW power supply cannot communicate for MW magnetron head unit.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Communication cannot be established via Muegge bus. 
+  -2. Connection cable is defective or not connected. 
+  -3. Power supply to the magnetron head is defective or not connected. 
+  -4. Magnetron head is defective. "	"  -1. Check Muegge bus cable. 
+  -2. Check power supply. 
+  -3. Check magnetron head. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+104	M4_06	  [MW] ARC Sensor Not Connected	"Indicating the condition that no connection to the arc sensor.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	No connection to the arc sensor. 	"Check connection cable between magnetron unit and coupling unit. There may be a defect in the cable or the cable is not connected. 
+After check possible causes, Reset the alarm from the control GUI for PC. "
+105	M4_07	  [MW] ARC Fault	"Indicating the condition that an arc has occurred in the waveguide. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	There is a possibility that an arc has occurred in the waveguide. 	"  -1. Check the application for possible damage. 
+  -2. Check the circulator for possible consequential errors. 
+  -3. Check the magnetron for possible consequential damage. 
+After check possible causes, Reset the alarm from the control GUI for PC. "
+106	M4_08	  [MW] High Pulse Power	"Indicating the condition that the average power in pulse mode exceeds 6000W.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The average power in pulse mode exceeds 6000W.	"Reset the alarm from the control GUI for PC. 
+If the alarm cannot be reset, contact CORNES Technologies Ltd."
+107	M4_09	"  [MW] Control Voltage, Magnetron Head"	"Indicating the condition that the control voltage at the magnetron head is outside the specification of 197 to 253 V. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The control voltage at the magnetron head is outside the specification of 197 to 253 V. 	"  -1. Check the voltage at the magnetron head.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+108	M4_10	"  [MW] Mains Frequency, Magnetron Head"	"Indicating the condition that mains frequency at the magnetron head is outside the permissible range (45 ? 65 Hz). 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Mains frequency at the magnetron head is outside the permissible range (45 ? 65 Hz). 	"  -1. Check the voltage at the magnetron head. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+109	M4_11	"  [MW] Heating Current, Magnetron Head"	"Indicating the condition that defect on heater control board of magnetron head (triac defective). 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Defect on heater control board (triac defective).	"Reset the alarm from the control GUI for PC. 
+If the alarm cannot be reset, contact CORNES Technologies Ltd."
+110	M4_12	"  [MW] Overtemperature, Heating Transformer"	"Indicating the condition that the temperature of the heating transformer exceeds the permissible range (greater than 125deg C). 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The temperature of the heating transformer exceeds the permissible range (greater than 125deg C). 	"Reset the alarm from the control GUI for PC. 
+If the alarm cannot be reset, contact CORNES Technologies Ltd."
+111	M4_13	"  [MW] Overtemperature, Magnetron"	"Indicating the condition that the temperature of the magnetron exceeds the permissible range (max. 50deg C). 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The temperature of the magnetron exceeds the permissible range (max. 50deg). 	"  -1. Check cooling water temperature. Permissible temperature of cooling water is 20 - 25 (68 - 77deg C (deg F). 
+  -2 Check fan. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+112	M4_14	"  [MW] Water Temperature, Magnetron Head"	"Indicating the condition that the cooling water temperature is outside of the permissible range(20 - 25 (68 - 77)deg C (deg F)). 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The cooling water temperature is outside of the permissible range	"  -1. Check the cooling water temperature at the magnetron head. Permissible temperature of cooling water is 20 - 25 (68 - 77)deg C (deg F). 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+113	M4_15	"  [MW] Fan Error, Power Supply"	"Indicating the condition that the fan of the power supply does not work. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The fan of the power supply does not work. 	"  -1. Check fan. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+114	M4_16	  [MW] Muegge Bus	"Indicating the condition that not accessible via the internal Muegge bus.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The A/D interface board and/or the Anybus module are not accessible via the internal 
+Muegge bus. 
+  -2. Connecting cables between the circuit boards are defective or not connected. 
+  -3. Circuit boards defective. "	"  -1. Check connecting cables. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+115	M4_17	"  [MW] Water Temperature, Power Supply"	"Indicating the condition that the cooling water temperature is outside of the permissible range(20 - 25 (68 - 77)deg C (deg F)). 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The cooling water temperature is outside of the permissible range. 	"  -1. Check cooling water temperature on the power supply. Permissible temperature of cooling water is 20 - 25 (68 - 77)deg C (deg F). 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+116	M4_18	"  [MW] Temperature Error, Power Supply"	"Indicating the condition that the temperature of the power supply is over 55deg C. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The temperature of the power supply is over 55deg C. 	"  -1. Check fan. 
+  -2. Check ambient temperature. 
+  -3. Check cooling water temperature on the power supply. Permissible temperature of cooling water is 20 - 25 (68 - 77)deg C (deg F). 
+  -4. Check flow rate of the cooling water on the power supply. Permissible flow rate is ? 4 (1,06)l/min (US. Gal/min.). 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+117	M4_19	"  [MW] Fan Error, Magnetron Head"	"Indicating the condition that the fan of the magnetron head does not work.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The fan of the magnetron head does not work.	"  -1. Check fan. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+118	M4_20	  [MW] Overcurrent In The Intermediate Circuit	"Indicating the condition that the intermediate circuit monitor reports error. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Intermediate circuit monitor reports error. 	"  -1. Check mains voltage for insufficient voltage and/or for extreme mains fluctuations. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+119	M4_21	"  [MW] Temperature Error, Magnetron Head"	"Indicating the condition that the temperature of the magnetron head is above 55deg C. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The temperature of the magnetron head is above 55 deg C. 	"  -1. Check fan. 
+  -2. Check ambient temperature. 
+  -3. Check the cooling water temperature at the magnetron head. Permissible temperature of cooling water is 20 - 25 (68 - 77) deg C (deg F). 
+  -4. Check flow rate of the cooling water at the magnetron head. Permissible flow rate is? 4 (1,06)l/min (US. Gal/min.).
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+120	M4_22	"  [MW] Mains Voltage, Power Supply"	"Indicating the condition that mains voltage outside of the permissible range. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Mains voltage outside of the permissible range. 	"  -1. The mains voltage must be within the permissible range. 
+  -2. Check all three phases, L1, L2 and L3. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+121	M4_23	  [MW] Setpoint < Actual Value	"Indicating the condition that the deviation between setpoint and actual value is more than 50%. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The deviation between setpoint and actual value is more than 50%. 	"  -1. Check mains current and main fuse. 
+  -2. Check whether mains voltage is applied. 
+  -3. Check whether a phase of the 3-phase AC current is missing.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+122	M4_24	  [MW] Anode Overcurrent	"Indicating the condition that the anode current is too high. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Anode current is too high. 	"  -1. ATTENTION: De-energize the power supply and safeguard it from being switched again. 
+  -2. Check the connecting cable between the power supply and the magnetron unit. 
+  -3. Check high-voltage cable, possible short circuit to ground. 
+  -4. After reset, the error can recur after a certain time (magnetron ageing). 
+  -5. Replace magnetron or magnetron unit. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+123	M4_25	  [MW] Anode Overvoltage	"Indicating the condition that the anode voltage is too high. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Anode voltage is too high. 	"  -1. ATTENTION: De-energize the power supply and safeguard it from being switched again. 
+  -2. Check the connecting cable between the power supply and the magnetron unit. 
+  -3. Check high-voltage cable, possible short circuit to ground. 
+  -4. After reset, the error can recur after a certain time (magnetron ageing). 
+  -5. Replace magnetron or magnetron unit. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+124	M4_26	  [MW] Magnetron Head Open	"Indicating the condition that the housing of the magnetron head is open. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The housing of the magnetron head is open. 	"  -1. Close housing
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+125	M4_27	  [MW] Magnetron Not Permissible	"Indicating the condition that No Muegge magnetron connected.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	No Muegge magnetron connected.	"  -1. Install Muegge magnetron.
+After check possible causes, Reset the alarm from the control GUI for PC. "
+126	M4_28	  [MW] Impermissible External Pulse Time	"Indicating the condition that pulse duration or pulse pause is outside of the permissible range. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Pulse duration or pulse pause is outside of the permissible range. 
+  -2. Connecting cable for the external pulse not connected or defective. 
+  -3. External pulse level not correct. "	"  -1. Check connecting cable. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+127	M4_29	  [MW] IC Error Power Supply	"Indicating the condition that IC on a circuit board are defective.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. One or more ICs on a circuit board are defective.
+  -2. Connecting cables between the circuit boards are defective or not connected. "	"  -1. Check connecting cables. 
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+128	M4_30	  [MW] Gate Supply Voltage	"Indicating the condition that the IGBT board not work. 
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. 24 V not connected to the IGBT board. 
+  -2. IGBT board defective. "	"Reset the alarm from the control GUI for PC. 
+If the alarm cannot be reset, contact CORNES Technologies Ltd."
+129	S4_01	  [MW] PS Temp Low	"Error name ""Supply Ambient Temp. Low""
+Indicating the condition that the temperature inside the MW power supply ambient temperature is under 8 deg C.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The air is too cold inside the power supply and it can create condensation.	"  -1. Check ambient temperature is within the limits. Increase room temperature.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+130	S4_02	  [MW] PS Temp High	"Error name ""Supply Ambient Temp. High""
+Indicating the condition that the temperature inside the MW power supply ambient temperature is over 45 deg C.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The air inside the power supply is too warm. 
+  -2. The air cooling might be incorrect."	"  -1. Check ambient temperature is within the limits. Improve cooling if generator is placed in a cabinet. Refer to manual for installation instruction.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+131	S4_03	  [MW] PS Humid High	"Error name ""Supply Humidity""
+Indicating the condition that humidity too high.
+Risk of arcing inside generator due to humidity.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"High humidity in the room.
+High humidity in the power supply is dangerous for high voltage circuit. "	"  -1. Use air conditioner to dry air.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+132	S4_04	  [MW] HD Temp Low	"Error name ""Head Ambient Temp. Low""
+Indicating the condition that MW-head ambient temperature is under 8 deg C.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The air is too cold inside the microwave head and it can create condensation.	"  -1. Check ambient temperature is within the limits. Increase room temperature.
+  After check possible causes, Reset the alarm from the control GUI for PC."
+133	S4_05	  [MW] HD Temp high	"Error name ""Head Ambient Temp. High""
+Indicating the condition that MW-head ambient temperature is over 45 deg C.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The air inside the microwave head is too warm. The air cooling might be incorrect.	"  -1. Check ambient temperature is within the limits. Improve cooling if generator is placed in a cabinet. Refer to manual for installation instruction.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+134	S4_06	  [MW] HD Humid High	"Error name ""Head Humidity""
+Indicating the condition that humidity too high.
+Risk of arcing inside microwave head due to humidity.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"High humidity in the room.
+High humidity in the power supply is dangerous for high voltage circuit. "	"  -1. Use air conditioner to dry air.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+135	S4_07	  [MW] Head Fan	"Error name ""Head Fan 1"",""Head Fan 2""
+Indicating the condition that MW-head Fan 1 and/or Fan 2 is stopped.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The head fan has failed.	"  -1. Check fan is blowing air inside the microwave head.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+136	S4_08	  [MW] HD Housing I/L	"Error name ""Head Housing""
+Indicating the condition that MW-head housing is open.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The mechanical sensor for the lid of the head is open.	"  -1. Close Microwave Head housing.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+137	S4_09	  [MW] Filament Fuse	"Error name ""Filament Fuse""
+Indicating the condition that MW-unit line filament detection fault.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Blown or disconnected filament fuse.	"  -1. Check filament fuse on rear panel.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+138	S4_10	  [MW] Filament Fault	"Error name ""Filament Dimmer ""
+Indicating the condition that MW-unit line filament detection abnormal behavior.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Fault on the filament power control.	"  -1. Cycle power of generator.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+139	S4_11	  [MW] Launcher Arc	"Error name ""Arc Launcher""
+Indicating the condition that arc detected on magnetron launcher.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	High humidity or dust present in the launcher/circulator.	"If persistent, check for arc inside the launcher. Clean any trace of arcing to prevent arcing again.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+140	S4_12	  [MW] Water Flow	"Error name ""Water Flow Low"", ""Water Flow High ""
+Indicating the condition below.
+   -In the low case, water flow is under 5 L/min for more than 30s or below 2,3L/min.
+   -In the high case, Water Flow is over 14 L/min.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"     In the low case
+  -1. Water flow drop in the magnetron head or water leakage.
+     In the high case
+  -1. Water flow is too high and the high pressure will damage the circuit."	"     In the low case
+  -1. Improve water cooling circuit to reach required water flow.
+     In the high case
+  -2. Reduce water pressure to prevent damage to water cooling circuit.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+141	S4_13	  [MW] Mag Temp	"Error name ""Magnetron Temperature""
+Indicating the condition that over temperature on magnetron.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Bad water cooling of the magnetron.	"  -1. Check water cooling and air inlet and outlet on Microwave Head are not obstructed.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+142	S4_14	  [MW] HD HV Connector	"Error name ""Head High Voltage Connector""
+Indicating the condition that high voltage cable is not connected on Head.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Missing High voltage cable on the Microwave Head.	"  -1. Connect high voltage cable on Microwave Head.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+143	S4_15	  [MW] Water Plate Temp	"Error name ""Water Plate Temp. High"", ""Water Plate Temp. Low""
+Indicating the condition below.
+    -In the low case, power supply water plate temperature is over 45deg C for 1s.
+   -In the high case, power supply water plate temperature is under 16deg C.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"     In the temp. high case
+  -1. High water temperature at the power supply input
+  -2. Low water flow in the power supply
+     In the temp. low case
+  -1. Low water temperature at generator inlet"	"Keep the water temperature at the input between 18 and 25deg C.
+  -1. Check the water circuit conditions.
+  -2. Check your water cooling system. Water too cold can create condensation.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+144	S4_16	  [MW] PS Fan	"Error name ""Power Supply Fan 1"",""Power Supply Fan 2""
+Indicating the condition below.
+   -Under current Fan 1 or 2
+   -Over current Fan 1 or 2
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Fan 1 or 2 of the power supply is disconnected.
+  -2. Fan 1 or 2 of the power supply is damaged."	"  -1. Check fan is blowing air inside the power supply.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+145	S4_17	  [MW] Under Output PW	"Error name ""Under Output Power""
+Indicating the condition that MW power is under 60% of set point.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Input voltage is too low or one phase is missing.	"  -1. Ensure all the 3 phases from the mains are connected to the mains connector of the generator.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+146	S4_18	  [MW] PS Under Voltage	"Supply Undervoltage
+
+Undervoltage on high voltage output (HV min fault)
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The power supply failed to produce high voltage.	"  -1. Check connections inside the power supply and the state of the HV board.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+147	S4_19	  [MW] PS Over Voltage	"Error name ""Supply Overvoltage""
+Indicating the condition that magnetron overvoltage detected on high voltage output (HV max fault).
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. No connection of the load to the HV supply.
+  -2. Filament heating is too low.
+  -3. Filament is broken.
+  -4. Instability of the mains line or the infeed voltage is too low.
+  -5. Failure of the magnetron or power supply."	"  -1. Check the connection between the head and the power supply, check the FIL cable.
+  -2. Check the filament parameters (voltage and current).
+  -3. Check continuity between the 2 filament connectors (transformer disconnected).
+  -4. Check the mains connections and the voltage.
+  After check possible causes, Reset the alarm from the control GUI for PC. 
+Contact CORNES Technologies Ltd. for more information."
+148	S4_20	  [MW] PS Primary Overcurrent	"Error name ""Power Supply Primary Overcurrent""
+Indicating the condition that overcurrent on primary of power supply (ILR max fault).
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Dip or surge on the mains voltage.
+  -2. Power transistor failure."	"  -1. Ensure all 3 phases from the mains are present up to supply cable and check their stability.
+  After check possible causes, Reset the alarm from the control GUI for PC. 
+If persistent at initial start, contact CORNES Technologies Ltd."
+149	S4_21	  [MW] PS Overcurrent	"Error name ""Anodic Current""
+Indicating the condition that magnetron anodic current too high (IA max fault).
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Short circuit on the high voltage.
+  -2. Unstable or Damaged magnetron.
+  -3. Reflected power directly on magnetron (without isolator).
+  -4. Mains line perturbation."	"  -1. Check the HV cable and the HV parts for arcs or burns.
+  -2. Check if there is continuity between the filament connectors and the ground.
+  -3. Reduce reflected power/setpoint or add an isolator.
+  -4. Check the mains voltage (stability, dip/surges etc...).
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+150	S4_22	  [MW] Supply HV Connector	"Error name ""Supply High-voltage Connector""
+Indicating the condition that high voltage cable is not connected on back panel of power apply.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Missing connector or badly inserted on the back of the power supply.	"  -1. Connect high voltage cable on back of Power Supply.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+151	S4_23	  [MW] 24V Supply	"Error name ""24V Supply Voltage Low "",""24V Supply Voltage High""
+Indicating the condition below.
+-Supply Voltage is under 22 V for 5s
+-Supply Voltage is over 26 V
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The 24V PSU inside the power supply is below 22V.
+  -2. The 24V PSU inside the power supply is over 26V."	"  -1. Check the 24V PSU and increase its setting.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+152	S4_24	  [MW] MAX RP Fault	"Error name ""Isolator Overload"", ""Max Reflected Power""
+Indicating the condition below.
+   -Excessive combined power (forward power + reflected power).
+   -Reflected power has reached the reflected power limit. Since selected mode is ""Stop on RP(Reflected power)"", microwave operation was stopped.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. (10 kW generators only) Load is not matched.
+  -2. Reflected power has increased in the application."	"  -1. Check applicator. Improve tuning or reduce power.
+  -2. Check your applicator and possible causes of an increase of Reflected Power.
+  If this behavior is undesired, increase Reflected Power limit or change Reflected Power mode.
+After check possible causes, Reset the alarm from the control GUI for PC. "
+153	S4_25	  [MW] EXT Com Fault	"Error name ""gProtocol Nameh Communication""
+Indicating the condition that high timeout communication on Fieldbus.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Loss of communication between the gateway and the fieldbus control.	"  -1. Check your control equipment and connections.
+Communication was stopped during for a significant period. For safety purposes microwave operation has been stopped.
+After check possible causes, Reset the alarm from the control GUI for PC. "
+154	S4_26	  [MW] INT Com Fault	"This alarm indicates one of the following errors: Check the display of the MW power supply.
+Error name ""Regulator Start Processor"", ""Regulator Init Failure"",  ""Internal Gateway Communication"", 
+""Regulator Communication"", ""Module Communication"", ""Regulator Processor"" 
+
+Each error is indicating the condition below.
+    -Internal initialization failure.
+    -Internal communication issue. 
+    -Internal error.
+    -Internal module communication fault detected on regulator side.
+    -Watchdog Internal error.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Internal communication loss.
+In the case of ""Internal Gateway Communication""
+  -1. Loss of communication between the control board and the gateway."	"Reset the alarm from the control GUI for PC. 
+If the alarm cannot be reset, contact CORNES Technologies Ltd. for more information"
+155	S4_27	  [MW] Front Panel STOP	"Error name ""Front Panel Stop""
+Indicating the condition that generator stop request from touch screen detected.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"When generator is controlled from a remote control, stopping microwaves from touch screen triggers this fault."	"  -1. In remote control, perform a normal operation stop from your remote control. 
+Change control mode to Front Panel if you want to control generator from touch screen.
+  Reset the alarm from the control GUI for PC. 
+If the alarm cannot be reset, contact CORNES Technologies Ltd. for more information."
+156	S4_28	  [MW] Gateway EXT Safety	"Error name gExternal Interlock""
+Indicating the condition that interlock open on SubD37 connector of the Analog Gateway.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"Analog gateway only, interlock not connected."	"  -1. Connect a normally closed contact device on pin 23 and 24 on Sub-D 37 at the back of the generator, or shunt if input not used.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+157	S4_29	  [MW] Over Output PW	"Error name gOver Output Power""
+Indicating the condition that MW power is over 140% of set point.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Power regulation failure or input voltage is too high.	"  -1. Ensure all the 3 phases from the mains are connected to the mains connector of the generator.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+158	S4_30	  [MW] HD Connection	"Error name ""Head unconnected"", ""Head Communication""
+Indicating the condition below.
+   -Power supply to head communication failure.
+   -Internal error.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Bad connection of the ""Data"" cable between the power supply and the head.
+  -2. The head electronic board is not programmed.
+  -3. Internal communication loss."	"  -1. Ensure ""data"" cable is connected between power supply and microwave head. 
+  Cycle power of generator if this fault cannot be reset.
+  -2. Upload the latest software with the USB port.
+  Cycle power of generator. 
+  After check possible causes, Reset the alarm from the control GUI for PC. 
+If the alarm cannot be reset, contact CORNES Technologies Ltd. for more information."
+159	S4_31	  [MW] STOP Button	"Error name gManual Stop Button""
+Indicating the condition that stop request from front panel hardware button detected.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Stop button pressed on the front panel.	"Reset faults to restart generator.
+Reset the alarm from the control GUI for PC. "
+160	S4_32	  [MW] Cooling Water Too Cold	"Error name gWater Temperature Low""
+Indicating the condition that water temperature is under 16 deg C.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Cold water at the magnetron water inlet.	"  -1. Increase input water temperature. Using too low temperature will make water condensing.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+161	S4_33	  [MW] Cooling Water Too Hot	"Error name gWater Temperature High""
+Indicating the condition that water temperature is over 30 deg C
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Warm water at the magnetron water inlet.	"  -1. Improve cooling circuit to keep water input temperature within the limit.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+162	S4_34	  [MW] Trans. Filament Temp	"Error name gTransformer Filament Temperature""
+Indicating the condition that over temperature on filament transformer.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Bad air cooling inside the head.	"  -1. Check air inlet and outlet on Microwave Head are not obstructed.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+163	S4_35	  [MW] Safety Relay Fault	"Error name gSafety Relay""
+Indicating the condition that safety relay state is inconsistent.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	The safety relay failed to connect or disconnect.	"  -1. Restart generator.
+  Reset the alarm from the control GUI for PC. 
+If persistent, relay might be damaged, contact CORNES Technologies Ltd."
+164	S4_36	  [MW] User ARC	"Error name gArc User""
+Indicating the condition that arc detected on user arc detector.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"Arc detected on the ""Arc user"" input on the head."	"  -1. Check for arc inside applicator.
+  If user arc input not used, ensure cap is fitted on arc input to prevent ambient light from being detected.
+After check possible causes, Reset the alarm from the control GUI for PC. "
+165	S4_37	  [MW] Fatal Error 	"Error name ""Settings File Missing FATAL ERROR"", ""Unsupported Generator FATAL ERROR"", ""Missing Mandatory Setting FATAL ERROR""
+Indicating the condition below.
+   -Generator Settings File not Found.
+   -This generator reference is not supported.
+   -Mandatory setting missing.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Missing file for the internal parameters.
+  -2. Wrong generator reference.
+  -3. Missing settings in the generator internal files."	"Reset the alarm from the control GUI for PC. 
+If the alarm cannot be reset, contact CORNES Technologies Ltd. for more information."
+166	S4_38	  [MW] Ext Safety Fault	"Error name ""Personal Safety"", ""Safety Relay ""
+Indicating the condition below.
+   -Personal Safety Interlock is open on M12 connector.
+   -Safety relay state is inconsistent.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Missing connector on the back of the power supply.
+  -2. The safety relay failed to connect or disconnect."	"  -1. Connect a normally closed contact sensor between pins 1 and 5 of ""Safety Interlock"" connector or shunt if not used.
+Restart generator.
+  Reset the alarm from the control GUI for PC. 
+If persistent, relay might be damaged, contact CORNES Technologies Ltd."
+167	S4_39	  [MW] RP Limit	"Indicating the condition that forward power doesn't reach the setpoint.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	Reflected power limitation is active.	"  -1. Change the reflected power limit setting.
+  After check possible causes, Reset the alarm from the control GUI for PC. "
+168	S4_40	  [AT] Motor 1/2 overcurrent	The current on the motor of stub 1 or 2 is abnormal.	There is an internal trouble with one of the four motors.	"Power down the equipment about 1 minute to reset it. Power up the equipment and if the fault persists, it is mandatory to send back the equipment to SAIREM. "
+169	S4_41	  [AT] Motor 3/4 overcurrent	The current on the motor of stub 3 or 4 is abnormal.	There is an internal trouble with one of the four motors.	"Power down the equipment about 1 minute to reset it. Power up the equipment and if the fault persists, it is mandatory to send back the equipment to SAIREM. "
+170	S4_42	  [AT] Thermal fault	"The internal buzzer goes on. When the thermal fault appears, all the four stubs are placed in neutral position. During this time, the equipment is not able to make tuning because all the stubs are retracted. Thereby, the generator will see all the reflected power. "	The temperature of the autotuner is too hot.	"Customer must wait the fall of temperature and then reset the fault manually, either by sending a reset order to the equipment or by restarting it."
+171	S4_43	  [AT] External com fault	The data received by the autotuner is incorrect.	Loss of communication between the gateway and the fieldbus control.	Check LAN cables and IP settings.
+172	S4_44	  [AT] 24V fault	The tunner is not able to operate correctly.	The voltage of power supply is too low or too high. 	Refers to main characteristics section for correct values.
+173	S4_45	  [AT] Stop detector fault	A stop detector is incorrectly active. 	"This fault is triggered if both high and low detectors from the same stub are active at the same time, or if the position of the stub is not coherent with the active detector. "	"Check on the interface which detector is the cause, then cycle power of the equipment."
+174	S4_46	  [AT] Init failed fault	"At power-up, one of the top stop detectors was never reached."	 Indicates a mechanical issue on the corresponding stub.	" Power down the equipment about 1 minute to reset it. Power up the equipment and if the fault persists, it is mandatory to send back the equipment to SAIREM. "
+175	S4_47	  [AT] Arc fault	An electrical arc happened into the waveguide. The internal buzzer goes on. All the four stubs are placed in neutral position. User must send a reset order to the equipment.	An electrical arc happened into the waveguide.	"  -1. Power down the generator to be sure that is no possibility to generate microwaves (switch off mains power, open external security loop, disconnect HV connector). 
+  -2. Open waveguides, applicator.
+  -3. Check into waveguides, applicator to see if there are some arc traces. 
+  -4. Clean all arc traces.
+  -5. Close all waveguides, applicator.
+  -6. Start your generator at low power first and check if there are no microwaves leakages."
+176	S4_48	  [AT] Motor driver 1 or 2 fault	There is an internal trouble with the motors of stub 1 or 2.	There is an internal trouble with one of the four motors.	"Power down the equipment about 1 minute to reset it. Power up the equipment and if the fault persists, it is mandatory to send back the equipment to SAIREM. "
+177	S4_49	  [AT] Motor driver 3 or 4 fault	There is an internal trouble with the motors of stub 3 or 4.	There is an internal trouble with one of the four motors.	"Power down the equipment about 1 minute to reset it. Power up the equipment and if the fault persists, it is mandatory to send back the equipment to SAIREM. "
+178		  Reserve			
+179		  Reserve			
+180		  Reserve			
+181		  Reserve			
+182		  Reserve			
+183		  Reserve			
+184		  Reserve			
+185		  Reserve			
+186		  Reserve			
+187		  Reserve			
+188		  Reserve			
+189		  Reserve			
+190		  Reserve			
+191		  Reserve			
+192		  Reserve			
+193	Da_01	  [MW] SGP System Failure			
+194	Da_02	  [MW] SGP Flash Memory Failure			
+195	Da_03	  [MW] SGP E2PROM Failure			
+196	Da_04	  [MW] PFM Failure			
+197	Da_05	  [MW] Communication Error SGP-SGM			
+198	Da_06	  [MW] Reserved			
+199	Da_07	  [MW] SGP FPGA Failure			
+200	Da_08	  [MW] Communication Error SGP-SMA			
+201	Da_09	  [MW] Reserved			
+202	Da_10	  [MW] Lower MW Power			
+203	Da_11	  [MW] External SRAM Failure			
+204	Da_12	  [MW] SGM Failure			
+205	Da_13	  [MW] SMA Failure			
+206	Da_14	  [MW] Reflected Power Interlock			
+207	Da_15	  [MW] Reserved			
+208	Da_16	  [MW] Power Line Phase Interruption			
+209	Da_17	  [MW] SGP DC24V Lower Voltage			
+210	Da_18	  [MW] Reserved			
+211	Da_19	  [MW] Reserved			
+212	Da_20	  [MW] SGP Fan Failure			
+213	Da_21	  [MW] Reserved			
+214	Da_22	  [MW] VA Abnormal			
+215	Da_23	  [MW] IA Ave. Over Range			
+216	Da_24	  [MW] IA Peak Over Range			
+217	Da_25	  [MW] Transformer Over Current			
+218	Da_26	  [MW] External Interlock			
+219	Da_27	  [MW] SGP HV Connector Cover Interlock			
+220	Da_28	  [MW] Reserved			
+221	Da_29	  [MW] Magnetron Failure			
+222	Da_30	  [MW] SGP Housing Cover Interlock			
+223	Da_31	  [MW] Heat Sink Over Temp.			
+224	Da_32	  [MW] Ambient Over Temp.			
+225	Da_33	  [MW] SGM System Failure			
+226	Da_34	  [MW] Reserved			
+227	Da_35	  [MW] SGM E2PROM Failure			
+228	Da_36	  [MW] Communication Error SGM-SGP			
+229	Da_37	  [MW] Reserved			
+230	Da_38	  [MW] Drive Error			
+231	Da_39	  [MW] Reserved			
+232	Da_40	  [MW] Filament Voltage Abnormal			
+233	Da_41	  [MW] Reserved			
+234	Da_42	  [MW] SGM Fan Failure			
+235	Da_43	  [MW] Water Leak Sensor Alarm			
+236	Da_44	  [MW] SGM Ext I/L 1			
+237	Da_45	  [MW] SGM HV Connector Cover Interlock			
+238	Da_46	  [MW] SGM Ext I/L 2			
+239	Da_47	  [MW] SGM Housing Cover Interlock			
+240	Da_48	  [MW] Magnetron Over Temp.			
+241	Da_49	  [MW] SMA E2PROM Failure			
+242	Da_50	  [MW] SMA Flash Memory Failure			
+243	Da_51	  [MW] SMA FPGA Failure			
+244	Da_52	  [MW] SMA Over Temp.			
+245	Da_53	  [MW] SMA DC24V Lower Voltage			
+246	Da_54	  [MW] STUB1 Initialize Error			
+247	Da_55	  [MW] STUB2 Initialize Error			
+248	Da_56	  [MW] STUB3 Initialize Error			
+249	Da_57	  [MW] STUB1 Error			
+250	Da_58	  [MW] STUB2 Error			
+251	Da_59	  [MW] STUB3 Error			
+252	Da_60	  [MW] SMA Over Load			
+253	Da_61	  [MW] Reserved			
+254	Da_62	  [MW] Communication Error SMA-SGP			
+255	Da_63	  [MW] Reserved			
+256	Da_64	  [MW] Reserved			
+257	Co_257	  FS4 Flow Low Warning	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 4 (cooling the microwave head) for  warning.
+Raising the alarm only.(warning)"	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the warning."
+258	Co_258	  FS5 Flow Low Warning	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 5 (cooling the autotuner) for warning.
+Raising the alarm only.(warning)"	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the warning."
+259	Co_259	  FS6 Flow Low Warning	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 6 (cooling the microwave components) for warning.
+Raising the alarm only.(warning)"	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the warning."
+260	Co_260	  FS4 Flow Low Alarm	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 4 (cooling the microwave head) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the alarm."
+261	Co_261	  FS5 Flow Low Alarm	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 5 (cooling the autotuner) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the alarm."
+262	Co_262	  FS6 Flow Low Alarm	"Indicating that the measured water flow rate reaches the low set flow rate of sensor 6 (cooling the microwave components) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Cooling water is leaking.
+  -2. Cooling line is logged.
+  -3. Water pump is not working properly.
+  -4. The valve on the cooling water line is closed."	"  -1. Check the water hose for cracks.
+  -2. Check that the joint of the water hose is not loose.
+  -3. Check the condition of the water filter.
+  -4. Check the water pump breaker is on.
+  -5. Check each valve is open properly. 
+  After check the condition of each valve and supply pressure and secure the flow rate , Reset the alarm."
+263	Co_263	  FS4 Temp. High Warning	"Indicating that the measured water temperature reaches the high set temperature of sensor 4 (cooling the microwave head) for  warning.
+Raising the alarm only.(warning)"	"  -1. Abnormal heat input in the microwave head.
+  -2. The cooling water flow rate is low.(flow meter FS4)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position. 
+  -2. Check is something wrong with the microwave head.
+  -3. Check the flow rate of the flow meter FS4.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+264	Co_264	  FS5 Temp. High Warning	"Indicating that the measured water temperature reaches the high set temperature of sensor 5 (cooling the autotuner) for warning.
+Raising the alarm only.(warning)"	"  -1. Abnormal heat input in the autotuner.
+  -2. The cooling water flow rate is low.(flow meter FS5)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position. 
+  -2. Check is something wrong with the autotuner.
+  -3. Check the flow rate of the flow meter FS5.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+265	Co_265	  FS6 Temp. High Warning	"Indicating that the measured water temperature reaches the high set temperature of sensor 6 (cooling the microwave components) for warning.
+Raising the alarm only.(warning)"	"  -1. Abnormal heat input in the microwave units.
+  -2. The cooling water flow rate is low.(flow meter FS6)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position.
+  -2. Check is something wrong with the microwave units.
+  -3. Check the flow rate of the flow meter FS6.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+266	Co_266	  FS4 Temp. High Alarm	"Indicating that the measured water temperature reaches the high set temperature of sensor 4 (cooling the microwave head) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Abnormal heat input in the microwave head.
+  -2. The cooling water flow rate is low.(flow meter FS4)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position. 
+  -2. Check is something wrong with the microwave head.
+  -3. Check the flow rate of the flow meter FS4.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+267	Co_267	  FS5 Temp. High Alarm	"Indicating that the measured water temperature reaches the high set temperature of sensor 5 (cooling the autotuner) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Abnormal heat input in the autotuner.
+  -2. The cooling water flow rate is low.(flow meter FS5)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position. 
+  -2. Check is something wrong with the autotuner.
+  -3. Check the flow rate of the flow meter FS5.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+268	Co_268	  FS6 Temp. High Alarm	"Indicating that the measured water temperature reaches the high set temperature of sensor 6 (cooling the microwave components) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. Abnormal heat input in the microwave units.
+  -2. The cooling water flow rate is low.(flow meter FS6)
+  -3. The temperature of the cooling water being supplied high."	"  -1. Check the plasma status to see if a plasma jump is occurring.
+  If a plasma jump is occurring, reduce the MW output and adjust the plasma to stabilize in the correct position.
+  -2. Check is something wrong with the microwave units.
+  -3. Check the flow rate of the flow meter FS6.
+  -4. Check if the cooling water chiller is working properly. 
+  If the cooling water flow rate is low, supply the secure flow rate. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+269	Co_269	  FS4 Temp. Low Warning	"Indicating that the measured water temperature reaches the low set temperature of sensor 4 (cooling the microwave head) for  warning.
+Raising the alarm only.(warning)"	"  -1. The cooling water flow rate is high.(flow meter FS4)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS4.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+270	Co_270	  FS5 Temp. Low Warning	"Indicating that the measured water temperature reaches the low set temperature of sensor 5 (cooling the autotuner) for warning.
+Raising the alarm only.(warning)"	"  -1. The cooling water flow rate is high.(flow meter FS5)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS5.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+271	Co_271	  FS6 Temp. Low Warning	"Indicating that the measured water temperature reaches the low set temperature of sensor 6 (cooling the microwave components) for warning.
+Raising the alarm only.(warning)"	"  -1. The cooling water flow rate is high.(flow meter FS6)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS6.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the warning."
+272	Co_272	  FS4 Temp. Low Alarm	"Indicating that the measured water temperature reaches the low set temperature of sensor 4 (cooling the microwave head) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The cooling water flow rate is high.(flow meter FS4)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS4.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+273	Co_273	  FS5 Temp. Low Alarm	"Indicating that the measured water temperature reaches the low set temperature of sensor 5 (cooling the autotuner) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The cooling water flow rate is high.(flow meter FS5)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS5.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+274	Co_274	  FS6 Temp. Low Alarm	"Indicating that the measured water temperature reaches the low set temperature of sensor 6 (cooling the microwave components) for alarm.
+When the alarm goes off, all the valves are closed and the standby mode of microwave is off."	"  -1. The cooling water flow rate is high.(flow meter FS6)
+  -2. The temperature of the cooling water being supplied low."	"  -1. Check the flow rate of the flow meter FS6.
+  -2. Check if the cooling water chiller is working properly. 
+  After check the condition of each valve and supply pressure, temperature and secure the flow rate , Reset the alarm."
+275		Reserved			
+276		Reserved			
+277		Reserved			
+278		Reserved			
+279		Reserved			
+280		Reserved			
+281		Reserved			
+282		Reserved			
+283		Reserved			
+284		Reserved			
+285		Reserved			
+286		Reserved			
+287		Reserved			
+288		Reserved			
+289		Reserved			
+290		Reserved			
+291		Reserved			
+292		Reserved			
+293		Reserved			
+294		Reserved			
+295		Reserved			
+296		Reserved			
+297		Reserved			
+298		Reserved			
+299		Reserved			
+300		Reserved			
+301		Reserved			
+302		Reserved			
+303		Reserved			
+304		Reserved			
+305		Reserved			
+306		Reserved			
+307		Reserved			
+308		Reserved			
+309		Reserved			
+310		Reserved			
+311		Reserved			
+312		Reserved			
+313		Reserved			
+314		Reserved			
+315		Reserved			
+316		Reserved			
+317		Reserved			
+318		Reserved			
+319		Reserved			
+320		Reserved			
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					

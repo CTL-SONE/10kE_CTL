@@ -323,6 +323,14 @@ Partial Class frmMainte2
         Me.Txb_FS6_HTW_THR = New System.Windows.Forms.TextBox()
         Me.Txb_FS6_LFA_THR = New System.Windows.Forms.TextBox()
         Me.Txb_FS6_LFW_THR = New System.Windows.Forms.TextBox()
+        Me.Autotuner = New System.Windows.Forms.GroupBox()
+        Me.Btn_AT_Move = New System.Windows.Forms.Button()
+        Me.Lbl_AT_EXP23 = New System.Windows.Forms.Label()
+        Me.Lbl_AT_EXP14 = New System.Windows.Forms.Label()
+        Me.Lbl_AT_unit23 = New System.Windows.Forms.Label()
+        Me.Lbl_AT_unit14 = New System.Windows.Forms.Label()
+        Me.Txb_AT_Pos23 = New System.Windows.Forms.TextBox()
+        Me.Txb_AT_Pos14 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -342,6 +350,7 @@ Partial Class frmMainte2
         Me.GroupBox16.SuspendLayout()
         Me.GroupBox18.SuspendLayout()
         Me.GroupBox19.SuspendLayout()
+        Me.Autotuner.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -4161,12 +4170,112 @@ Partial Class frmMainte2
         Me.Txb_FS6_LFW_THR.Text = "0"
         Me.Txb_FS6_LFW_THR.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
+        'Autotuner
+        '
+        Me.Autotuner.Controls.Add(Me.Btn_AT_Move)
+        Me.Autotuner.Controls.Add(Me.Lbl_AT_EXP23)
+        Me.Autotuner.Controls.Add(Me.Lbl_AT_EXP14)
+        Me.Autotuner.Controls.Add(Me.Lbl_AT_unit23)
+        Me.Autotuner.Controls.Add(Me.Lbl_AT_unit14)
+        Me.Autotuner.Controls.Add(Me.Txb_AT_Pos23)
+        Me.Autotuner.Controls.Add(Me.Txb_AT_Pos14)
+        Me.Autotuner.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Autotuner.ForeColor = System.Drawing.Color.DarkBlue
+        Me.Autotuner.Location = New System.Drawing.Point(380, 27)
+        Me.Autotuner.Name = "Autotuner"
+        Me.Autotuner.Size = New System.Drawing.Size(364, 77)
+        Me.Autotuner.TabIndex = 257
+        Me.Autotuner.TabStop = False
+        Me.Autotuner.Text = "AUTO TUNER"
+        '
+        'Btn_AT_Move
+        '
+        Me.Btn_AT_Move.Location = New System.Drawing.Point(307, 29)
+        Me.Btn_AT_Move.Name = "Btn_AT_Move"
+        Me.Btn_AT_Move.Size = New System.Drawing.Size(50, 30)
+        Me.Btn_AT_Move.TabIndex = 275
+        Me.Btn_AT_Move.Text = "Move"
+        Me.Btn_AT_Move.UseVisualStyleBackColor = True
+        '
+        'Lbl_AT_EXP23
+        '
+        Me.Lbl_AT_EXP23.AutoSize = True
+        Me.Lbl_AT_EXP23.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_AT_EXP23.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_AT_EXP23.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Lbl_AT_EXP23.Location = New System.Drawing.Point(7, 51)
+        Me.Lbl_AT_EXP23.Name = "Lbl_AT_EXP23"
+        Me.Lbl_AT_EXP23.Size = New System.Drawing.Size(187, 14)
+        Me.Lbl_AT_EXP23.TabIndex = 145
+        Me.Lbl_AT_EXP23.Text = "Stub2 and 3 Initial Position"
+        '
+        'Lbl_AT_EXP14
+        '
+        Me.Lbl_AT_EXP14.AutoSize = True
+        Me.Lbl_AT_EXP14.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_AT_EXP14.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_AT_EXP14.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.Lbl_AT_EXP14.Location = New System.Drawing.Point(6, 22)
+        Me.Lbl_AT_EXP14.Name = "Lbl_AT_EXP14"
+        Me.Lbl_AT_EXP14.Size = New System.Drawing.Size(187, 14)
+        Me.Lbl_AT_EXP14.TabIndex = 142
+        Me.Lbl_AT_EXP14.Text = "Stub1 and 4 Initial Position"
+        '
+        'Lbl_AT_unit23
+        '
+        Me.Lbl_AT_unit23.AutoSize = True
+        Me.Lbl_AT_unit23.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_AT_unit23.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_AT_unit23.ForeColor = System.Drawing.Color.White
+        Me.Lbl_AT_unit23.Location = New System.Drawing.Point(273, 57)
+        Me.Lbl_AT_unit23.Name = "Lbl_AT_unit23"
+        Me.Lbl_AT_unit23.Size = New System.Drawing.Size(29, 13)
+        Me.Lbl_AT_unit23.TabIndex = 139
+        Me.Lbl_AT_unit23.Text = "[%]"
+        '
+        'Lbl_AT_unit14
+        '
+        Me.Lbl_AT_unit14.AutoSize = True
+        Me.Lbl_AT_unit14.BackColor = System.Drawing.Color.Transparent
+        Me.Lbl_AT_unit14.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lbl_AT_unit14.ForeColor = System.Drawing.Color.White
+        Me.Lbl_AT_unit14.Location = New System.Drawing.Point(273, 28)
+        Me.Lbl_AT_unit14.Name = "Lbl_AT_unit14"
+        Me.Lbl_AT_unit14.Size = New System.Drawing.Size(29, 13)
+        Me.Lbl_AT_unit14.TabIndex = 138
+        Me.Lbl_AT_unit14.Text = "[%]"
+        '
+        'Txb_AT_Pos23
+        '
+        Me.Txb_AT_Pos23.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Txb_AT_Pos23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Txb_AT_Pos23.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txb_AT_Pos23.Location = New System.Drawing.Point(209, 47)
+        Me.Txb_AT_Pos23.Name = "Txb_AT_Pos23"
+        Me.Txb_AT_Pos23.Size = New System.Drawing.Size(62, 23)
+        Me.Txb_AT_Pos23.TabIndex = 50
+        Me.Txb_AT_Pos23.Text = "0"
+        Me.Txb_AT_Pos23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Txb_AT_Pos14
+        '
+        Me.Txb_AT_Pos14.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.Txb_AT_Pos14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Txb_AT_Pos14.Font = New System.Drawing.Font("Verdana", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Txb_AT_Pos14.Location = New System.Drawing.Point(209, 18)
+        Me.Txb_AT_Pos14.Name = "Txb_AT_Pos14"
+        Me.Txb_AT_Pos14.Size = New System.Drawing.Size(62, 23)
+        Me.Txb_AT_Pos14.TabIndex = 49
+        Me.Txb_AT_Pos14.Text = "0"
+        Me.Txb_AT_Pos14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'frmMainte2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSalmon
-        Me.ClientSize = New System.Drawing.Size(1150, 875)
+        Me.ClientSize = New System.Drawing.Size(1150, 871)
+        Me.Controls.Add(Me.Autotuner)
         Me.Controls.Add(Me.GroupBox19)
         Me.Controls.Add(Me.GroupBox18)
         Me.Controls.Add(Me.GroupBox16)
@@ -4230,6 +4339,8 @@ Partial Class frmMainte2
         Me.GroupBox18.PerformLayout()
         Me.GroupBox19.ResumeLayout(False)
         Me.GroupBox19.PerformLayout()
+        Me.Autotuner.ResumeLayout(False)
+        Me.Autotuner.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -4535,4 +4646,12 @@ Partial Class frmMainte2
     Friend WithEvents Txb_FS6_HTW_THR As TextBox
     Friend WithEvents Txb_FS6_LFA_THR As TextBox
     Friend WithEvents Txb_FS6_LFW_THR As TextBox
+    Friend WithEvents Autotuner As GroupBox
+    Friend WithEvents Btn_AT_Move As Button
+    Friend WithEvents Lbl_AT_EXP23 As Label
+    Friend WithEvents Lbl_AT_EXP14 As Label
+    Friend WithEvents Lbl_AT_unit23 As Label
+    Friend WithEvents Lbl_AT_unit14 As Label
+    Friend WithEvents Txb_AT_Pos23 As TextBox
+    Friend WithEvents Txb_AT_Pos14 As TextBox
 End Class

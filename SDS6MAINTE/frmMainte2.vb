@@ -184,6 +184,13 @@
             Me.TextBox49.Text = .LowAlmSP
             Me.TextBox45.Text = .LowAlmDT
         End With
+
+        '2024/06/11 Stub Position追加
+        With frmMainte.ATStubPos
+            Me.Txb_AT_Pos14.Text = .StubPos14
+            Me.Txb_AT_Pos23.Text = .StubPos23
+        End With
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -515,6 +522,13 @@
             .LowAlmSP = CInt(Me.TextBox49.Text)
             .LowAlmDT = CLng(Me.TextBox45.Text)
         End With
+
+        '24/6/11 AT Stub Pos追加のため変更
+        With frmMainte.ATStubPos
+            .StubPos14 = CInt(Me.Txb_AT_Pos14.Text)
+            .StubPos23 = CInt(Me.Txb_AT_Pos23.Text)
+        End With
+
     End Sub
 
     Private Function SHA256_cnv(ByVal pasw As String) As System.Text.StringBuilder
@@ -833,7 +847,7 @@
                 textbox = TextBox56
             Case "TextBox55"
                 textbox = TextBox55
-                 '23/10/04 FS6追加 Delay Time
+           '23/10/04 FS6追加 Delay Time
             Case "Txb_FS6_LFW_DT"
                 textbox = Txb_FS6_LFW_DT
             Case "Txb_FS6_LFA_DT"
@@ -846,6 +860,13 @@
                 textbox = Txb_FS6_LTW_DT
             Case "Txb_FS6_LTA_DT"
                 textbox = Txb_FS6_LTA_DT
+
+                ''24/6/11 AT Stub Pos追加
+                ' Case "Txb_AT_Pos14"
+                '     textbox = Txb_AT_Pos14
+                ' Case "Txb_AT_Pos23"
+                '     textbox = Txb_AT_Pos23
+
         End Select
 
         If e.KeyChar = vbCr Then
@@ -1051,6 +1072,12 @@
             Case "Txb_FS6_LTA_DT"
                 textbox = Txb_FS6_LTA_DT
 
+                ' '24/6/11 AT Stub Pos追加
+                'Case "Txb_AT_Pos14"
+                '    textbox = Txb_AT_Pos14
+                'Case "Txb_AT_Pos23"
+                '    textbox = Txb_AT_Pos23
+
         End Select
 
         If e.KeyCode = Keys.A Then
@@ -1059,4 +1086,14 @@
         End If
     End Sub
 
+    Private Sub Btn_AT_Move_Click(sender As Object, e As EventArgs) Handles Btn_AT_Move.Click
+
+        frmMainte.AxDBCommManager1.WriteDevice(DATABUILDERAXLibLB.DBPlcDevice.DKV5000_DM, "9930", frmMainte.ATStubPos.StubPos14)
+        frmMainte.AxDBCommManager1.WriteDevice(DATABUILDERAXLibLB.DBPlcDevice.DKV5000_DM, "9932", frmMainte.ATStubPos.StubPos23)
+
+    End Sub
+
+    Private Sub Txb_AT_Pos14_TextChanged(sender As Object, e As EventArgs) Handles Txb_AT_Pos14.TextChanged
+
+    End Sub
 End Class
