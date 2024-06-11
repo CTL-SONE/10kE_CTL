@@ -1506,9 +1506,9 @@
                 Case 170 : WtrAlm_FS6.LowTmp_WarDT = rdval / 10
                 Case 171 : WtrAlm_FS6.LowTmp_AlmDT = rdval / 10
 
-                     '24/6/11 171からAT Stub Pos追加のため変更
-                Case 172 : ATStubPos.StubPos14 = rdval
-                Case 173 : ATStubPos.StubPos23 = rdval
+               '24/6/11 171からAT Stub Pos追加のため変更
+                Case 172 : ATStubPos.StubPos14 = rdval / 100
+                Case 173 : ATStubPos.StubPos23 = rdval / 100
 
             End Select
         Next
@@ -1773,8 +1773,8 @@
                 Case 171 : wrval = WtrAlm_FS6.LowTmp_AlmDT * 10
 
                '24/6/11 171からAT Stub Pos追加のため変更
-                Case 172 : wrval = ATStubPos.StubPos14
-                Case 173 : wrval = ATStubPos.StubPos23
+                Case 172 : wrval = ATStubPos.StubPos14 * 100
+                Case 173 : wrval = ATStubPos.StubPos23 * 100
 
 
             End Select
