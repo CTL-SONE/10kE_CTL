@@ -1,0 +1,5 @@
+デバイスはD20000からD20012までを1行にしていて、D20010とD20011が未使用です。ここを使用したいと考えています。
+
+D20010をもう１行追加、項目名はTemperature　少数点無し　最大2000℃（温度コントロール時の設定温度）
+
+D20011を2進ｂｉｔ0からｂｉｔ8まで1で　PRES RAMP/MW RANP/TEMP CON/MFC1 RAMP/MFC2 RAMP/MFC3 RAMP/MFC4 RAMP/MFC5 RAMP/MFC6 RAMP（動作トリガ）

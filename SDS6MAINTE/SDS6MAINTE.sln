@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33328.57
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "SDS6MAINTE", "SDS6MAINTE.vbproj", "{EE4850CB-A471-4045-963A-BB8EBD8EC3D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE4850CB-A471-4045-963A-BB8EBD8EC3D0}.Debug|x86.ActiveCfg = Debug|x86
+		{EE4850CB-A471-4045-963A-BB8EBD8EC3D0}.Debug|x86.Build.0 = Debug|x86
+		{EE4850CB-A471-4045-963A-BB8EBD8EC3D0}.Release|x86.ActiveCfg = Release|x86
+		{EE4850CB-A471-4045-963A-BB8EBD8EC3D0}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C20B387C-6DB5-4AB5-A5E2-75AB9FF1D46D}
+	EndGlobalSection
+EndGlobal
