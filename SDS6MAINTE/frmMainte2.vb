@@ -664,6 +664,17 @@
         TextBox.BackColor = SystemColors.ControlLight
     End Sub
 
+    '24/6/11 AT Stub Posの入力制限 0%～100%の制限範囲
+    Private Sub StubPos_set(ByRef TextBox As TextBox)
+        Dim sp As Integer = CInt(TextBox.Text)
+        If sp < 0 Then
+            sp = 0
+        ElseIf sp > 100 Then
+            sp = 100
+        End If
+        TextBox.Text = sp
+        TextBox.BackColor = SystemColors.ControlLight
+    End Sub
 
     Private Sub TextBoxT_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox52.KeyPress, TextBox51.KeyPress, TextBox50.KeyPress, TextBox49.KeyPress,
                                                                                     TextBox20.KeyPress, TextBox19.KeyPress, TextBox16.KeyPress, TextBox15.KeyPress, TextBox14.KeyPress, TextBox13.KeyPress,
@@ -860,13 +871,6 @@
                 textbox = Txb_FS6_LTW_DT
             Case "Txb_FS6_LTA_DT"
                 textbox = Txb_FS6_LTA_DT
-
-                ''24/6/11 AT Stub Pos追加
-                ' Case "Txb_AT_Pos14"
-                '     textbox = Txb_AT_Pos14
-                ' Case "Txb_AT_Pos23"
-                '     textbox = Txb_AT_Pos23
-
         End Select
 
         If e.KeyChar = vbCr Then
@@ -1071,19 +1075,49 @@
                 textbox = Txb_FS6_LTW_DT
             Case "Txb_FS6_LTA_DT"
                 textbox = Txb_FS6_LTA_DT
-
-                ' '24/6/11 AT Stub Pos追加
-                'Case "Txb_AT_Pos14"
-                '    textbox = Txb_AT_Pos14
-                'Case "Txb_AT_Pos23"
-                '    textbox = Txb_AT_Pos23
-
         End Select
 
         If e.KeyCode = Keys.A Then
         Else
             textbox.BackColor = Color.Yellow
         End If
+    End Sub
+
+    '24/6/11 AT Stub Pos追加　入力中は黄色にする処理
+    Private Sub StubPos_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Txb_AT_Pos14.KeyPress, Txb_AT_Pos23.KeyPress
+
+        Dim txtb As String = sender.Name
+        Dim textbox As TextBox = TextBox52
+
+        Select Case txtb
+            Case "Txb_AT_Pos14"
+                textbox = Txb_AT_Pos14
+            Case "Txb_AT_Pos23"
+                textbox = Txb_AT_Pos23
+        End Select
+
+        If e.KeyChar = vbCr Then
+            StubPos_set(textbox)
+        End If
+
+    End Sub
+    Private Sub StubPos_KeyDown(sender As Object, e As KeyEventArgs) Handles Txb_AT_Pos14.KeyDown, Txb_AT_Pos23.KeyDown
+
+        Dim txtb As String = sender.Name
+        Dim textbox As TextBox = TextBox52
+
+        Select Case txtb
+            Case "Txb_AT_Pos14"
+                textbox = Txb_AT_Pos14
+            Case "Txb_AT_Pos23"
+                textbox = Txb_AT_Pos23
+        End Select
+
+        If e.KeyCode = Keys.A Then
+        Else
+            textbox.BackColor = Color.Yellow
+        End If
+
     End Sub
 
     '24/6/11 AT Stub Pos追加　When Move button is pushed, Stub 1,4 and Stub 2,3 is changed by current Parameter 
