@@ -1086,9 +1086,12 @@
         End If
     End Sub
 
+    '24/6/11 AT Stub Pos追加　When Move button is pushed, Stub 1,4 and Stub 2,3 is changed by current Parameter 
     Private Sub Btn_AT_Move_Click(sender As Object, e As EventArgs) Handles Btn_AT_Move.Click
 
-        frmMainte.AxDBCommManager1.WriteDevice(DATABUILDERAXLibLB.DBPlcDevice.KV5000_RLY_B, "6813", 1)
+        frmMainte.AxDBCommManager1.WriteDevice(DATABUILDERAXLibLB.DBPlcDevice.KV5000_RLY_B, "6813", 1) 'R6813 Move Operation
+        frmMainte.AxDBCommManager1.WriteDevice(DATABUILDERAXLibLB.DBPlcDevice.DKV5000_DM, "9930", Me.Txb_AT_Pos14.Text * 100) 'DM9930 Stub1&4 position
+        frmMainte.AxDBCommManager1.WriteDevice(DATABUILDERAXLibLB.DBPlcDevice.DKV5000_DM, "9932", Me.Txb_AT_Pos23.Text * 100) 'DM9932 Stub2&3 position 
 
     End Sub
 
